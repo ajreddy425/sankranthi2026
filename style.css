@@ -34,20 +34,8 @@ body {
 }
 
 .hero {
-    background: url('images/kite.jpg') no-repeat center center/cover;
+    background: url('images/kite.jpg') no-repeat center center;
+    background-size: cover;
     color: #fff;
     text-align: center;
-    padding: 4rem 2rem;
-}
-
-.btn-primary {
-    background: #1976d2;
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.btn-primary:hover {
-    background: #0d47a1;
-}
+    padding

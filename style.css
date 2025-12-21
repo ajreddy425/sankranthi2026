@@ -1,0 +1,53 @@
+body {
+    font-family: 'Noto Sans Telugu', sans-serif;
+    background: linear-gradient(to bottom, #fff8e1, #ffe0b2);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.navbar {
+    background: #388e3c;
+}
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0.5rem;
+}
+.nav-list li {
+    margin: 0 1rem;
+}
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-list a:hover {
+    color: #fbc02d;
+}
+
+.hero {
+    background: url('images/kite.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.btn-primary {
+    background: #1976d2;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-primary:hover {
+    background: #0d47a1;
+}

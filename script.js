@@ -1,24 +1,23 @@
-// Smooth scroll for nav links
-document.querySelectorAll('.nav-list a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// script.js
+
+// Example: Auto-update live scores
+document.addEventListener("DOMContentLoaded", () => {
+  const cricketScores = document.getElementById("cricket-scores");
+  const kabaddiScores = document.getElementById("kabaddi-scores");
+
+  // Simulated live update (replace with API or JSON later)
+  setTimeout(() => {
+    cricketScores.innerHTML = "<p>🏏 Kalepalle XI 78/2 (10 overs)</p>";
+    kabaddiScores.innerHTML = "<p>🤸 Team A 32 - Team B 29</p>";
+  }, 5000);
 });
 
-// Dummy live scores (replace with API later)
-function loadScores() {
-    document.getElementById("cricket-scores").innerHTML =
-        "🏏 India 145/4 (18 overs)";
-    document.getElementById("kabaddi-scores").innerHTML =
-        "🤸 Team A 28 - Team B 26";
-}
-
-// Simulate loading after 2 seconds
-setTimeout(loadScores, 2000);
-
-// Live match placeholder
-document.getElementById("live-match-container").innerHTML =
-    "<p>🏏 Cricket Match: Kalepalle XI vs Guests — Starts at 4 PM</p>";
+// Example: Smooth scroll for nav links
+document.querySelectorAll(".nav-list a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});

@@ -55,6 +55,11 @@ section h2 {
     color: white;
 }
 
+/* Custom header color */
+.blue-header {
+    color: #1976d2; /* festive blue shade */
+}
+
 /* Container */
 .container {
     width: 90%;
@@ -97,6 +102,45 @@ section h2 {
     padding: 2rem;
     border-radius: 10px;
     line-height: 1.8;
+}
+
+/* Notice / Update */
+.notice {
+    background: #fff3e0;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+.notice-item {
+    margin-bottom: 1.5rem;
+}
+.download-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: #1976d2;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.download-link:hover {
+    background: #0d47a1;
+}
+/* NEW badge blinking */
+.new-badge {
+    background: #f44336;
+    color: white;
+    font-size: 0.8em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 8px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Scores */

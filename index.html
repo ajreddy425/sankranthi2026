@@ -20,6 +20,7 @@
     <div class="container">
       <ul class="nav-list">
         <li><a href="#home">హోమ్</a></li>
+        <li><a href="#gallery">గ్యాలరీలు</a></li> <!-- NEW ITEM -->
         <li><a href="#about">గురించి</a></li>
         <li><a href="#events">ఈవెంట్‌లు</a></li>
         <li><a href="#games">ఆటలు</a></li>
@@ -41,22 +42,36 @@
       </div>
     </div>
   </section>
-   <section class="separator">
+
+  <!-- Separator Section -->
+  <section class="separator">
     <div class="container">
-      <h2>🎉 సంక్రాంతి పండుగ 2026 🎉</h2>
+      <h2 class="blue-header">సంక్రాంతి గురించి</h2>
     </div>
-    </section>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
-      <h2 class="blue-header">సంక్రాంతి గురించి</h2>
-       <p>
+      <p>
         సంక్రాంతి భారతీయ సంస్కృతిలో అత్యంత ఆనందకరమైన పండుగ. ఇది రైతుల కష్టానికి ప్రతిఫలంగా, కొత్త సంవత్సరానికి ఆరంభంగా జరుపుకుంటారు.  
         మన కాళేపల్లె గ్రామంలో ఈ పండుగ కేవలం పండుగ మాత్రమే కాదు — ఇది మనందరిని ఒకచోట చేర్చే, మన బంధాలను మరింత బలపరిచే సందర్భం.  
         ఈ సంవత్సరం ప్రత్యేకంగా, గాలిపటాలు, ఆటలు, సాంస్కృతిక కార్యక్రమాలు, మరియు రుచికరమైన వంటకాలతో మన సంక్రాంతి మరింత రంగులమయం కానుంది.  
         ఎంత బిజీగా ఉన్నా, మన గ్రామానికి వచ్చి ఈ వేడుకలో పాల్గొని, మీ ఆనందాన్ని పంచుకోవడం ద్వారా ఈ పండుగను మరింత ప్రత్యేకంగా మార్చండి!  
-        </p>
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="blue-header">📸 గ్యాలరీలు</h2>
+      <p>ఇక్కడ మీరు గత సంక్రాంతి ఫోటోలు మరియు ఈ సంవత్సరం వేడుకల చిత్రాలను చూడవచ్చు.</p>
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Gallery Image 1">
+        <img src="images/gallery2.jpg" alt="Gallery Image 2">
+        <img src="images/gallery3.jpg" alt="Gallery Image 3">
+      </div>
     </div>
   </section>
 
@@ -93,7 +108,13 @@
   <section id="games" class="games">
     <div class="container">
       <h2 class="blue-header">🎮 సంక్రాంతి ఆటల షెడ్యూల్</h2>
-      <!-- tables omitted for brevity, keep your existing ones -->
+      <table>
+        <tr><th>తేదీ</th><th>ఆట</th><th>సమయం</th></tr>
+        <tr><td>జనవరి 14</td><td>కబడ్డీ</td><td>ఉదయం 10:00</td></tr>
+        <tr><td>జనవరి 14</td><td>వాలీబాల్</td><td>మధ్యాహ్నం 2:00</td></tr>
+        <tr><td>జనవరి 15</td><td>క్రికెట్</td><td>ఉదయం 9:00</td></tr>
+        <tr><td>జనవరి 15</td><td>చెస్</td><td>మధ్యాహ్నం 3:00</td></tr>
+      </table>
     </div>
   </section>
 
@@ -115,40 +136,5 @@
         <h3>మీ అభిప్రాయం చెప్పండి?</h3>
         <button onclick="submitPoll('yes')" id="yesBtn">✅ అవును</button>
         <button onclick="submitPoll('no')" id="noBtn">❌ కాదు</button>
-        <p id="pollResult" style="margin-top:10px; font-weight:bold; color:#388e3c;"></p>
+        <p id="pollResult" style="margin-top:10px; font-weight:bold;"></p>
       </div>
-    </div>
-  </section>
-
-  <!-- Live Match Section -->
-  <section id="live-match" class="live-match">
-    <div class="container">
-      <h2 class="blue-header">🔴 లైవ్ మ్యాచ్</h2>
-      <p>ఇక్కడ మీరు లైవ్ మ్యాచ్‌లను చూడవచ్చు. త్వరలో లింక్ అందుబాటులో ఉంటుంది!</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 కాళేపల్లె గ్రామం | Designed for Sankranti Festival</p>
-  </footer>
-
-  <!-- Poll Script -->
-  <script>
-  function submitPoll(choice) {
-    if(localStorage.getItem("pollVoted")) {
-      document.getElementById("pollResult").innerText = "⚠️ మీరు ఇప్పటికే ఓటు వేశారు.";
-      return;
-    }
-    localStorage.setItem("pollVoted", choice);
-    if(choice === "yes") {
-      document.getElementById("pollResult").innerText = "✅ మీరు 'అవును' అని ఓటు వేశారు.";
-    } else {
-      document.getElementById("pollResult").innerText = "❌ మీరు 'కాదు' అని ఓటు వేశారు.";
-    }
-    document.getElementById("yesBtn").disabled = true;
-    document.getElementById("noBtn").disabled = true;
-  }
-  </script>
-</body>
-</html>

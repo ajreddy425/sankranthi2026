@@ -12,13 +12,13 @@ body {
     text-align: center;
     padding: 2rem 0;
 }
-.about {
+/* .about {
   background: url('images/kids.jpg') no-repeat center center;
   background-size: cover;   /* makes it fill the section */
   color: white;          /* text color for readability */
   padding: 3rem 0;          /* keep spacing */
   margin-bottom: 2rem;
-}
+/* } */ */
 /* Special heading colors */
 .white-only {
     color: white; /* for hero heading only */
@@ -51,13 +51,48 @@ body {
 }
 
 /* Hero */
-.hero {
+/* .hero {
     background: url('images/bgv3.png') no-repeat center center;
     background-size: cover;
     color: #fff;
     text-align: center;
     padding: 4rem 2rem;
     margin-bottom: 2rem; 
+} */
+
+.hero {
+    background: url('images/bgv3.png') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;   /* increased gap below hero */
+    position: relative;
+}
+
+.about {
+    background: url('images/kids.jpg') no-repeat center center;
+    background-size: cover;   /* makes it fill the section */
+    color: white;             /* text color for readability */
+    padding: 3rem 2rem;       /* balanced spacing */
+    margin-top: 3rem;         /* extra gap above about section */
+    position: relative;
+}
+
+/* Optional: add a semi-transparent overlay for readability */
+.hero::before,
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3); /* dark overlay */
+    z-index: 0;
+}
+
+.hero .container,
+.about .container {
+    position: relative;
+    z-index: 1; /* keeps text above overlay */
 }
 
 /* Sections */

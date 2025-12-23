@@ -13,9 +13,14 @@ body {
     padding: 2rem 0;
 }
 
+/* Special heading colors */
 .white-only {
-  color: white;
+    color: white; /* for hero heading only */
 }
+.blue-header {
+    color: #1976d2; /* festive deep blue for section headings */
+}
+
 /* Navbar */
 .navbar {
     background: #388e3c;
@@ -55,7 +60,7 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: white;
+    /* no color here, use classes instead */
 }
 
 /* Container */

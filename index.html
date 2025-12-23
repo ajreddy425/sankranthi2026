@@ -122,20 +122,52 @@
       </div>
     </section>
 
-    <!-- Message Section -->
-    <section id="message" class="message">
-        <div class="container">
-            <h2>గ్రామ సమితి సందేశం</h2>
-            <div class="message-box">
-                <p style="color: #388e3c; font-weight: bold; font-size: 1.1em;">ప్రియమైన కాళేపల్లె గ్రామస్తులారా,</p>
-                <p>ప్రతి రోజు మనం ఉద్యోగాలు, వ్యవసాయ పనులు, ఇతర బాధ్యతలతో బిజీగా ఉంటాము. అలాంటి రోజుల్లో సంక్రాంతి పండుగ మనందరినీ ఒకచోట చేర్చే ప్రత్యేకమైన సందర్భం.</p>
-                <p>ఈసారి సంక్రాంతి వేడుకలను మరింత ప్రత్యేకంగా నిర్వహించేందుకు మీ అభిప్రాయాలు, సూచనలు తెలియజేయండి.</p>
-                <p style="color: #b71c1c; font-weight: bold;">మీ విలువైన సూచనలు మన కార్యక్రమాన్ని విజయవంతంగా నిర్వహించడంలో ఎంతో సహాయపడతాయి.</p>
-                <p style="color: #1976d2; font-weight: bold;">అందరూ ఈ వేడుకల్లో పాల్గొని, సంక్రాంతి పండుగ వాతావరణాన్ని తీసుకురావడంలో భాగస్వాములవుదాం.</p>
-                <p style="color: #fbc02d; font-weight: bold;">ధన్యవాదాలు!</p>
-            </div>
-        </div>
-    </section>
+<!-- Message Section -->
+<section id="message" class="message">
+  <div class="container">
+    <h2>గ్రామ సందేశం</h2>
+    <div class="message-box">
+      <p style="color: #388e3c; font-weight: bold; font-size: 1.1em;">ప్రియమైన కాళేపల్లె గ్రామస్తులారా,</p>
+      <p>ప్రతి రోజు మనం ఉద్యోగాలు, వ్యవసాయ పనులు, ఇతర బాధ్యతలతో బిజీగా ఉంటాము. అలాంటి రోజుల్లో సంక్రాంతి పండుగ మనందరినీ ఒకచోట చేర్చే ప్రత్యేకమైన సందర్భం.</p>
+      <p>ఈసారి సంక్రాంతి వేడుకలను మరింత ప్రత్యేకంగా నిర్వహించేందుకు మీ అభిప్రాయాలు, సూచనలు తెలియజేయండి.</p>
+      <p style="color: #b71c1c; font-weight: bold;">మీ విలువైన సూచనలు మన కార్యక్రమాన్ని విజయవంతంగా నిర్వహించడంలో ఎంతో సహాయపడతాయి.</p>
+      <p style="color: #1976d2; font-weight: bold;">అందరూ ఈ వేడుకల్లో పాల్గొని, సంక్రాంతి పండుగ వాతావరణాన్ని తీసుకురావడంలో భాగస్వాములవుదాం.</p>
+      <p style="color: #fbc02d; font-weight: bold;">ధన్యవాదాలు!</p>
+    </div>
+
+    <!-- Poll Section -->
+    <div id="poll" style="margin-top:20px;">
+      <h3>మీరు పాల్గొంటారా?</h3>
+      <button onclick="submitPoll('yes')" id="yesBtn">✅ అవును</button>
+      <button onclick="submitPoll('no')" id="noBtn">❌ కాదు</button>
+      <p id="pollResult" style="margin-top:10px; font-weight:bold; color:#388e3c;"></p>
+    </div>
+  </div>
+</section>
+
+<script>
+function submitPoll(choice) {
+  // Check if already voted
+  if(localStorage.getItem("pollVoted")) {
+    document.getElementById("pollResult").innerText = "⚠️ మీరు ఇప్పటికే ఓటు వేశారు.";
+    return;
+  }
+
+  // Save vote (only once)
+  localStorage.setItem("pollVoted", choice);
+
+  // Show result
+  if(choice === "yes") {
+    document.getElementById("pollResult").innerText = "✅ మీరు 'అవును' అని ఓటు వేశారు.";
+  } else {
+    document.getElementById("pollResult").innerText = "❌ మీరు 'కాదు' అని ఓటు వేశారు.";
+  }
+
+  // Disable buttons
+  document.getElementById("yesBtn").disabled = true;
+  document.getElementById("noBtn").disabled = true;
+}
+</script>
 
     <!-- Live Match Section -->
     <section id="live-match" class="live-match">

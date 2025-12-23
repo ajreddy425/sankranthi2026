@@ -212,3 +212,13 @@ section h2 {
         padding: 2rem 1rem;
     }
 }
+
+.separator {
+  background: #fff8e1;   /* light festive strip */
+  text-align: center;
+  padding: 2rem 0;
+  margin: 0;             /* sits neatly between hero & about */
+}
+.separator h2 {
+  margin: 0;
+}

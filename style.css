@@ -71,9 +71,15 @@ body {
 .white-only {
     color: white; /* for hero heading only */
 }
+
 .blue-header {
-    color: #1976d2; /* festive deep blue for section headings */
+    color: #1976d2;       /* deep blue */
+    font-size: 2rem;      /* bigger font size */
+    font-weight: 700;     /* bold */
+    text-align: center;   /* center align like events */
+    margin-bottom: 1.5rem;
 }
+
 
 /* Navbar */
 .navbar {

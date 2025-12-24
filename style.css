@@ -215,3 +215,10 @@ section h2 {
     }
 }
 
+/* All section headings to blue */
+.events h2,
+.games h2,
+.message h2,
+.live-match h2 {
+  color: #1976d2;   /* Material Blue shade */
+}

@@ -214,3 +214,15 @@ section h2 {
         padding: 2rem 1rem;
     }
 }
+
+.about h2.blue-header {
+  margin-top: 2rem;
+}
+
+.about p {
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}

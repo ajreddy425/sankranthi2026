@@ -214,15 +214,3 @@ section h2 {
         padding: 2rem 1rem;
     }
 }
-
-.blue-header {
-    color: #1976d2;       /* same festive blue */
-    font-size: 2rem;      /* same size as events heading */
-    font-weight: 700;     /* bold */
-    text-align: center;   /* center align like events */
-    margin-bottom: 1.5rem;
-}
-
-.about h2.blue-header {
-    color: #1976d2 !important;
-}

@@ -222,3 +222,15 @@ section h2 {
 .live-match h2 {
   color: #1976d2;   /* Material Blue shade */
 }
+
+.event-card p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #444;
+}
+
+.event-card p:last-child {
+  font-size: 1.05em;
+  color: #1b5e20;   /* deep green for tradition text */
+  font-weight: bold;
+}

@@ -214,3 +214,12 @@ section h2 {
         padding: 2rem 1rem;
     }
 }
+
+.about p {
+  text-align: justify;       /* neat alignment on both sides */
+  font-size: 1.1em;          /* slightly larger for readability */
+  line-height: 1.8;          /* more breathing space between lines */
+  max-width: 800px;          /* keep text in a nice column */
+  margin: 0 auto;            /* center the block horizontally */
+  color: #444;               /* softer text color */
+}

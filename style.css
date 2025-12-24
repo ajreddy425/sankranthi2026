@@ -15,7 +15,7 @@ body {
 .about {
   background: url('images/kids.jpg') no-repeat center center;
   background-size: cover;   /* makes it fill the section */
-  color: #212121;           /* text color for readability */
+  color: white;           /* text color for readability */
   padding: 3rem 0;          /* keep spacing */
 }
 /* Special heading colors */

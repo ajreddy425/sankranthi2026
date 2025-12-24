@@ -214,3 +214,10 @@ section h2 {
         padding: 2rem 1rem;
     }
 }
+
+.about h2.blue-header {
+    color: #1976d2 !important;  /* force blue color */
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}

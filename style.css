@@ -12,12 +12,61 @@ body {
     text-align: center;
     padding: 2rem 0;
 }
-.about {
-  background: url('images/kids.jpg') no-repeat center center;
-  background-size: cover;   /* makes it fill the section */
-  color: #212121;           /* text color for readability */
-  padding: 3rem 0;          /* keep spacing */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('images/bgv3.png') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 40px; /* gap below hero section */
 }
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4); /* overlay for readability */
+    z-index: 1;
+}
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+.hero h2, .hero p {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    line-height: 1.8;
+}
+
+/* About Section */
+.about {
+    position: relative;
+    background: url('images/kids.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 3rem 0;
+    margin-top: 40px; /* gap above about section */
+}
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); /* overlay for better contrast */
+    z-index: 1;
+}
+.about .container {
+    position: relative;
+    z-index: 2;
+}
+.about h2, .about p {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
 /* Special heading colors */
 .white-only {
     color: white; /* for hero heading only */
@@ -49,15 +98,6 @@ body {
     color: #fbc02d;
 }
 
-/* Hero */
-.hero {
-    background: url('images/bgv3.png') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
 /* Sections */
 section {
     padding: 3rem 0;
@@ -65,7 +105,6 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 2rem;
-    /* no color here, use classes instead */
 }
 
 /* Container */
@@ -96,7 +135,7 @@ section h2 {
 /* Thumbnail images */
 .event-img {
     width: 100%;
-    max-width: 150px;   /* thumbnail size */
+    max-width: 150px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;

@@ -12,20 +12,10 @@ body {
     text-align: center;
     padding: 2rem 0;
 }
-.about {
-  background: url('images/kids.jpg') no-repeat center center;
-  background-size: cover;   /* makes it fill the section */
-  color: #212121;           /* text color for readability */
-  padding: 3rem 0;          /* keep spacing */
-}
-/* Special heading colors */
-.white-only {
-    color: white; /* for hero heading only */
-}
-.blue-header {
-    color: #1976d2; /* festive deep blue for section headings */
-}
 
+.white-only {
+  color: white;
+}
 /* Navbar */
 .navbar {
     background: #388e3c;
@@ -65,7 +55,7 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 2rem;
-    /* no color here, use classes instead */
+    color: white;
 }
 
 /* Container */

@@ -235,26 +235,3 @@ section h2 {
   font-weight: bold;
 }
 
-.scores {
-  background-color: #f0f8ff; /* light blue */
-  padding: 20px;
-}
-
-.contact {
-  background-color: #fff3e0; /* soft orange */
-  padding: 20px;
-}
-
-.contact h2 {
-  color: #d84315; /* deep orange heading */
-}
-
-.contact ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contact li {
-  margin: 8px 0;
-  font-weight: bold;
-}

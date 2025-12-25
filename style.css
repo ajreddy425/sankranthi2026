@@ -247,3 +247,34 @@ section h2 {
   font-weight: bold;
   margin: 0;                 /* removes extra spacing around text */
 }
+
+.contact {
+  background-color: #fff8e1;   /* soft yellow background */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #2e7d32 !important;   /* festive green heading */
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #1565c0 !important;   /* deep blue for contrast */
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact li {
+  font-size: 16px;
+  color: #4e342e !important;   /* deep brown for list items */
+  margin-bottom: 10px;
+}
+

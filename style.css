@@ -235,24 +235,18 @@ section h2 {
   font-weight: bold;
 }
 
-/* Scores Section */
 .scores {
-  background-color: #f9f9f9;   /* light grey for clarity */
-  padding: 30px 0;
+  background-color: #f0f8ff; /* light blue */
+  padding: 20px;
 }
 
-.scores h2 {
-  color: #2e7d32;              /* green header for sports vibe */
-}
-
-/* Contact Section */
 .contact {
-  background-color: #fff3e0;   /* soft orange for warmth */
-  padding: 30px 0;
+  background-color: #fff3e0; /* soft orange */
+  padding: 20px;
 }
 
 .contact h2 {
-  color: #d84315;              /* deep orange header */
+  color: #d84315; /* deep orange heading */
 }
 
 .contact ul {

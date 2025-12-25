@@ -77,7 +77,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background: #388e3c;
+    background: green;
 }
 .nav-list {
     display: flex;
@@ -235,3 +235,15 @@ section h2 {
   font-weight: bold;
 }
 
+.footer {
+  background-color: green;   /* sets the background to green */
+  text-align: center;
+  padding: 0.5rem;           /* same as navbar padding */
+  margin-top: 20px;
+}
+
+.footer p {
+  color: white;              /* makes the text stand out on green */
+  font-weight: bold;
+  margin: 0;                 /* removes extra spacing around text */
+}

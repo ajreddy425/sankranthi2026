@@ -5,117 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>కాళేపల్లె సంక్రాంతి పండుగ 2026</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Telugu Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <h1>కాళేపల్లె సంక్రాంతి పండుగ 2026</h1>
-  <p>మన గ్రామం • మన ఆనందం • మన సంక్రాంతి</p>
+  <div class="container">
+    <h1>కాళేపల్లె సంక్రాంతి పండుగ 2026</h1>
+    <p>మన గ్రామం, మన ఆనందం, మన సంక్రాంతి</p>
+  </div>
 </header>
 
 <nav class="navbar">
   <ul>
     <li><a href="#home">హోమ్</a></li>
     <li><a href="#events">ఈవెంట్‌లు</a></li>
-    <li><a href="#countdown">కౌంట్‌డౌన్</a></li>
-    <li><a href="#scores">స్కోర్‌లు</a></li>
-    <li><a href="#poll">అభిప్రాయం</a></li>
-    <li><a href="#gallery">గ్యాలరీ</a></li>
+    <li><a href="#winners">విజేతలు</a></li>
+    <li><a href="#message">సందేశం</a></li>
+    <li><a href="#contact">సంప్రదించండి</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-content">
-    <h2>సంక్రాంతి 2026కి సిద్ధంగా ఉన్నారా? 🎉</h2>
-    <p>ఆటలు • సంప్రదాయం • ఆనందం</p>
+  <h2>సంక్రాంతి 2026 ని ఆనందంగా జరుపుకుందాం 🎉</h2>
+</section>
 
-    <a class="btn"
-       href="https://wa.me/?text=కాళేపల్లె%20సంక్రాంతి%20పండుగ%202026%20కి%20మీరు%20అందరూ%20ఆహ్వానితులు!"
-       target="_blank">
-       📲 WhatsApp లో పంచుకోండి
-    </a>
+<!-- Countdown -->
+<section class="countdown">
+  <h2>⏳ సంక్రాంతి ప్రారంభానికి మిగిలిన సమయం</h2>
+  <div id="timer">
+    <span><b id="days">0</b><br>రోజులు</span>
+    <span><b id="hours">0</b><br>గంటలు</span>
+    <span><b id="minutes">0</b><br>నిమిషాలు</span>
+    <span><b id="seconds">0</b><br>సెకన్లు</span>
   </div>
 </section>
 
-<!-- COUNTDOWN -->
-<section id="countdown" class="section bg-light">
-  <h2 class="section-title">⏳ సంక్రాంతి కౌంట్‌డౌన్</h2>
-  <div class="countdown" id="timer"></div>
-</section>
-
-<!-- EVENTS -->
-<section id="events" class="section">
-  <h2 class="section-title">🎯 ఈవెంట్‌లు</h2>
-  <div class="card-grid">
-    <div class="card"><h3>🪁 గాలిపటం</h3><p>ఆకాశం నిండా రంగులు</p></div>
-    <div class="card"><h3>🏐 వాలీబాల్</h3><p>యూత్ మ్యాచ్‌లు</p></div>
-    <div class="card"><h3>🤼 కబడ్డీ</h3><p>గ్రామ శక్తి</p></div>
-    <div class="card"><h3>🌸 రంగోలి</h3><p>కళా పోటీ</p></div>
+<!-- Events -->
+<section id="events" class="events">
+  <h2>🎊 ఈవెంట్‌లు</h2>
+  <div class="grid">
+    <div class="card">🪁 గాలిపటం ఉత్సవం</div>
+    <div class="card">🏐 వాలీబాల్</div>
+    <div class="card">🤼 కబడ్డీ</div>
+    <div class="card">🎯 కేరమ్స్</div>
+    <div class="card">🌸 రంగోలి</div>
   </div>
 </section>
 
-<!-- LIVE SCORES -->
-<section id="scores" class="section bg-light">
-  <h2 class="section-title">🏆 లైవ్ స్కోర్‌లు</h2>
-
-  <!-- ADMIN JUST EDIT TEXT HERE -->
-  <div class="score-box">
-    <p><strong>వాలీబాల్:</strong> టీమ్ A vs టీమ్ B – 21 / 18</p>
-    <p><strong>కబడ్డీ:</strong> కాళేపల్లె vs వరదపల్లి – LIVE</p>
-    <p><strong>చెస్ ఫైనల్:</strong> రవి 🏆</p>
-  </div>
+<!-- Winners -->
+<section id="winners" class="winners">
+  <h2>🏆 విజేతలు</h2>
+  <ul>
+    <li>🏐 వాలీబాల్ – టీమ్ కాళేపల్లె</li>
+    <li>🤼 కబడ్డీ – యువత జట్టు</li>
+    <li>🎯 కేరమ్స్ – రవి</li>
+    <li>🌸 రంగోలి – సీతమ్మ</li>
+  </ul>
 </section>
 
-<!-- POLL -->
-<section id="poll" class="section">
-  <h2 class="section-title">🗳️ ఈ వేడుకలు మీకు నచ్చాయా?</h2>
+<!-- Message + Poll -->
+<section id="message" class="message">
+  <h2>గ్రామ సందేశం</h2>
+  <p>అందరూ పాల్గొని సంక్రాంతిని ఘనంగా జరుపుకుందాం.</p>
 
-  <div class="poll-box">
-    <button onclick="vote('yes')">✅ అవును</button>
-    <button onclick="vote('no')">❌ కాదు</button>
-
-    <p id="pollResult"></p>
-  </div>
+  <h3>మీ అభిప్రాయం?</h3>
+  <button id="yesBtn" onclick="vote('yes')">✅ అవును</button>
+  <button id="noBtn" onclick="vote('no')">❌ కాదు</button>
+  <p id="pollResult"></p>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="section bg-light">
-  <h2 class="section-title">📸 గ్యాలరీ</h2>
-  <div class="gallery">
-    <img src="images/gallery1.jpg">
-    <img src="images/gallery2.jpg">
-    <img src="images/gallery3.jpg">
-  </div>
+<!-- WhatsApp Share -->
+<section class="share">
+  <a class="whatsapp"
+     href="https://wa.me/?text=కాళేపల్లె సంక్రాంతి పండుగ 2026 🎉%0Aఅందరూ పాల్గొనండి!"
+     target="_blank">
+     📲 WhatsApp లో పంచుకోండి
+  </a>
 </section>
 
-<footer class="footer">
-  <p>© 2026 కాళేపల్లె సంక్రాంతి పండుగ</p>
+<!-- Contact -->
+<section id="contact" class="contact">
+  <h2>సంప్రదించండి</h2>
+  <p>ఫోన్: +91 xxxxxxxxx</p>
+  <p>స్థానం: కాళేపల్లె గ్రామం</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 కాళేపల్లె సంక్రాంతి పండుగ</p>
 </footer>
 
+<!-- JS -->
 <script>
-/* COUNTDOWN */
-const sankrantiDate = new Date("Jan 14, 2026 00:00:00").getTime();
+/* Countdown */
+const eventDate = new Date("Jan 14, 2026 06:00:00").getTime();
 setInterval(() => {
   const now = new Date().getTime();
-  const d = sankrantiDate - now;
+  const d = eventDate - now;
   if (d < 0) return;
-
-  const days = Math.floor(d / (1000*60*60*24));
-  document.getElementById("timer").innerHTML =
-    `🎉 ఇంకా <b>${days}</b> రోజులు మాత్రమే!`;
+  days.innerText = Math.floor(d / (1000*60*60*24));
+  hours.innerText = Math.floor((d / (1000*60*60)) % 24);
+  minutes.innerText = Math.floor((d / (1000*60)) % 60);
+  seconds.innerText = Math.floor((d / 1000) % 60);
 }, 1000);
 
-/* POLL */
-function vote(choice){
+/* Poll */
+function vote(val){
   if(localStorage.getItem("voted")){
-    document.getElementById("pollResult").innerText="⚠️ మీరు ఇప్పటికే ఓటు వేశారు";
+    pollResult.innerText="✔️ మీరు ఇప్పటికే ఓటు వేశారు";
     return;
   }
-  localStorage.setItem("voted",choice);
-  document.getElementById("pollResult").innerText="🙏 మీ అభిప్రాయానికి ధన్యవాదాలు!";
+  localStorage.setItem("voted", val);
+  pollResult.innerText = val==="yes" ? "✅ అవును" : "❌ కాదు";
+  yesBtn.disabled=true;
+  noBtn.disabled=true;
+}
+
+window.onload=()=>{
+  if(localStorage.getItem("voted")){
+    yesBtn.disabled=true;
+    noBtn.disabled=true;
+    pollResult.innerText="✔️ మీరు ఇప్పటికే ఓటు వేశారు";
+  }
 }
 </script>
 

@@ -234,3 +234,33 @@ section h2 {
   color: #1b5e20;   /* deep green for tradition text */
   font-weight: bold;
 }
+
+/* Scores Section */
+.scores {
+  background-color: #f9f9f9;   /* light grey for clarity */
+  padding: 30px 0;
+}
+
+.scores h2 {
+  color: #2e7d32;              /* green header for sports vibe */
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff3e0;   /* soft orange for warmth */
+  padding: 30px 0;
+}
+
+.contact h2 {
+  color: #d84315;              /* deep orange header */
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  margin: 8px 0;
+  font-weight: bold;
+}

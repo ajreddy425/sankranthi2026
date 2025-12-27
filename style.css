@@ -16,7 +16,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('images/bgv3.png') no-repeat center center;
+    background: url('https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/bgv3.png') no-repeat center center;
     background-size: cover;
     color: #fff;
     text-align: center;
@@ -43,7 +43,7 @@ body {
 /* About Section */
 .about {
     position: relative;
-    background: url('images/kids.jpg') no-repeat center center;
+    background: url('https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/kids.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
     padding: 3rem 0;

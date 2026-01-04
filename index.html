@@ -1,137 +1,466 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>కాళేపల్లె సంక్రాంతి పండుగ 2026</title>
-
-  <!-- Telugu Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankranthi Festival 2026 | సంక్రాంతి పండుగ 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="langToggle" onclick="toggleLanguage()">
+            <i class="fas fa-language"></i>
+            <span id="langText">తెలుగు</span>
+        </button>
+    </div>
 
-<header class="header">
-  <div class="container">
-    <h1>కాళేపల్లె సంక్రాంతి పండుగ 2026</h1>
-    <p>మన గ్రామం, మన ఆనందం, మన సంక్రాంతి</p>
-  </div>
-</header>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1 id="brandText">Sankranthi 2026</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" id="navHome">Home</a></li>
+                <li><a href="#about" id="navAbout">About</a></li>
+                <li><a href="#traditions" id="navTraditions">Traditions</a></li>
+                <li><a href="#gallery" id="navGallery">Gallery</a></li>
+                <li><a href="#contact" id="navContact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="navbar">
-  <ul>
-    <li><a href="#home">హోమ్</a></li>
-    <li><a href="#events">ఈవెంట్‌లు</a></li>
-    <li><a href="#winners">విజేతలు</a></li>
-    <li><a href="#message">సందేశం</a></li>
-    <li><a href="#contact">సంప్రదించండి</a></li>
-  </ul>
-</nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="festival-animation">
+                <div class="kite kite1">🪁</div>
+                <div class="kite kite2">🪁</div>
+                <div class="kite kite3">🪁</div>
+                <div class="sun">☀️</div>
+            </div>
+            <h1 class="hero-title" id="heroTitle">Makar Sankranthi 2026</h1>
+            <p class="hero-subtitle" id="heroSubtitle">Celebrate the Festival of Harvest and Joy</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <h2 id="countdownTitle">Time Remaining for Sankranthi</h2>
+                <div class="countdown">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <label id="daysLabel">Days</label>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <label id="hoursLabel">Hours</label>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <label id="minutesLabel">Minutes</label>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <label id="secondsLabel">Seconds</label>
+                    </div>
+                </div>
+            </div>
 
-<section id="home" class="hero">
-  <h2>సంక్రాంతి 2026 ని ఆనందంగా జరుపుకుందాం 🎉</h2>
-</section>
+            <button class="cta-button" id="ctaButton">Celebrate With Us</button>
+        </div>
+    </section>
 
-<!-- Countdown -->
-<section class="countdown">
-  <h2>⏳ సంక్రాంతి ప్రారంభానికి మిగిలిన సమయం</h2>
-  <div id="timer">
-    <span><b id="days">0</b><br>రోజులు</span>
-    <span><b id="hours">0</b><br>గంటలు</span>
-    <span><b id="minutes">0</b><br>నిమిషాలు</span>
-    <span><b id="seconds">0</b><br>సెకన్లు</span>
-  </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="aboutTitle">About Makar Sankranthi</h2>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="aboutText1">Makar Sankranthi is one of the most important Hindu festivals celebrated across India, marking the transition of the sun into the zodiac sign of Capricorn (Makara). This auspicious day signifies the end of winter solstice and the beginning of longer days.</p>
+                    <p id="aboutText2">The festival is celebrated with great enthusiasm in Andhra Pradesh and Telangana, where it spans over four days - Bhogi, Sankranthi, Kanuma, and Mukkanuma. Each day has its own significance and rituals.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-sun"></i>
+                        <p>Festival Image</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Events -->
-<section id="events" class="events">
-  <h2>🎊 ఈవెంట్‌లు</h2>
-  <div class="grid">
-    <div class="card">🪁 గాలిపటం ఉత్సవం</div>
-    <div class="card">🏐 వాలీబాల్</div>
-    <div class="card">🤼 కబడ్డీ</div>
-    <div class="card">🎯 కేరమ్స్</div>
-    <div class="card">🌸 రంగోలి</div>
-  </div>
-</section>
+    <!-- Traditions Section -->
+    <section id="traditions" class="traditions">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="traditionsTitle">Festival Traditions</h2>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="traditions-grid">
+                <div class="tradition-card">
+                    <div class="tradition-icon">🪁</div>
+                    <h3 id="kiteTitle">Kite Flying</h3>
+                    <p id="kiteDesc">Colorful kites fill the sky as families and friends compete in kite flying competitions across rooftops.</p>
+                </div>
+                <div class="tradition-card">
+                    <div class="tradition-icon">🍯</div>
+                    <h3 id="sweetTitle">Til-Gul Exchange</h3>
+                    <p id="sweetDesc">People exchange sesame seeds (til) and jaggery (gul) sweets while saying "Til-gul ghya, god god bola".</p>
+                </div>
+                <div class="tradition-card">
+                    <div class="tradition-icon">🔥</div>
+                    <h3 id="bhogiTitle">Bhogi Bonfire</h3>
+                    <p id="bhogiDesc">Old and unwanted items are burned in a bonfire to symbolize new beginnings and prosperity.</p>
+                </div>
+                <div class="tradition-card">
+                    <div class="tradition-icon">🐄</div>
+                    <h3 id="cattleTitle">Cattle Worship</h3>
+                    <p id="cattleDesc">Cows and bulls are decorated with colors, bells, and garlands as a mark of gratitude for their service.</p>
+                </div>
+                <div class="tradition-card">
+                    <div class="tradition-icon">🏺</div>
+                    <h3 id="rangolithTitle">Rangoli Art</h3>
+                    <p id="rangoliDesc">Beautiful colorful patterns are drawn at the entrance of homes to welcome prosperity and good luck.</p>
+                </div>
+                <div class="tradition-card">
+                    <div class="tradition-icon">🎵</div>
+                    <h3 id="folkTitle">Folk Songs</h3>
+                    <p id="folkDesc">Traditional folk songs and dances are performed to celebrate the harvest season and community spirit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Winners -->
-<section id="winners" class="winners">
-  <h2>🏆 విజేతలు</h2>
-  <ul>
-    <li>🏐 వాలీబాల్ – టీమ్ కాళేపల్లె</li>
-    <li>🤼 కబడ్డీ – యువత జట్టు</li>
-    <li>🎯 కేరమ్స్ – రవి</li>
-    <li>🌸 రంగోలి – సీతమ్మ</li>
-  </ul>
-</section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="galleryTitle">Festival Gallery</h2>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Kite Flying</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Traditional Food</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Rangoli Designs</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Folk Dances</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Bhogi Bonfire</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Cattle Decoration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Message + Poll -->
-<section id="message" class="message">
-  <h2>గ్రామ సందేశం</h2>
-  <p>అందరూ పాల్గొని సంక్రాంతిని ఘనంగా జరుపుకుందాం.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="contactTitle">Contact Us</h2>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 id="locationTitle">Location</h4>
+                            <p id="locationText">Hyderabad, Telangana, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 id="phoneTitle">Phone</h4>
+                            <p>+91 9876543210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 id="emailTitle">Email</h4>
+                            <p>info@sankranthi2026.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" id="nameInput" required>
+                        <input type="email" placeholder="Your Email" id="emailInput" required>
+                        <textarea placeholder="Your Message" id="messageInput" rows="5" required></textarea>
+                        <button type="submit" id="submitBtn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <h3>మీ అభిప్రాయం?</h3>
-  <button id="yesBtn" onclick="vote('yes')">✅ అవును</button>
-  <button id="noBtn" onclick="vote('no')">❌ కాదు</button>
-  <p id="pollResult"></p>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footerTitle">Sankranthi 2026</h3>
+                    <p id="footerDesc">Celebrating the harvest festival with joy, tradition, and community spirit.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 id="quickLinksTitle">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" id="footerHome">Home</a></li>
+                        <li><a href="#about" id="footerAbout">About</a></li>
+                        <li><a href="#traditions" id="footerTraditions">Traditions</a></li>
+                        <li><a href="#gallery" id="footerGallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 id="festivalDatesTitle">Festival Dates 2026</h4>
+                    <ul>
+                        <li id="bhogiDate">Bhogi: January 13, 2026</li>
+                        <li id="sankranthiDate">Sankranthi: January 14, 2026</li>
+                        <li id="kanumaDate">Kanuma: January 15, 2026</li>
+                        <li id="mukkanumaDate">Mukkanuma: January 16, 2026</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="copyright">&copy; 2026 Sankranthi Festival. All rights reserved. Made with ❤️ for the community.</p>
+            </div>
+        </div>
+    </footer>
 
-<!-- WhatsApp Share -->
-<section class="share">
-  <a class="whatsapp"
-     href="https://wa.me/?text=కాళేపల్లె సంక్రాంతి పండుగ 2026 🎉%0Aఅందరూ పాల్గొనండి!"
-     target="_blank">
-     📲 WhatsApp లో పంచుకోండి
-  </a>
-</section>
+    <script>
+        // Language data
+        const translations = {
+            english: {
+                brandText: "Sankranthi 2026",
+                navHome: "Home",
+                navAbout: "About",
+                navTraditions: "Traditions",
+                navGallery: "Gallery",
+                navContact: "Contact",
+                heroTitle: "Makar Sankranthi 2026",
+                heroSubtitle: "Celebrate the Festival of Harvest and Joy",
+                countdownTitle: "Time Remaining for Sankranthi",
+                daysLabel: "Days",
+                hoursLabel: "Hours",
+                minutesLabel: "Minutes",
+                secondsLabel: "Seconds",
+                ctaButton: "Celebrate With Us",
+                aboutTitle: "About Makar Sankranthi",
+                aboutText1: "Makar Sankranthi is one of the most important Hindu festivals celebrated across India, marking the transition of the sun into the zodiac sign of Capricorn (Makara). This auspicious day signifies the end of winter solstice and the beginning of longer days.",
+                aboutText2: "The festival is celebrated with great enthusiasm in Andhra Pradesh and Telangana, where it spans over four days - Bhogi, Sankranthi, Kanuma, and Mukkanuma. Each day has its own significance and rituals.",
+                traditionsTitle: "Festival Traditions",
+                kiteTitle: "Kite Flying",
+                kiteDesc: "Colorful kites fill the sky as families and friends compete in kite flying competitions across rooftops.",
+                sweetTitle: "Til-Gul Exchange",
+                sweetDesc: "People exchange sesame seeds (til) and jaggery (gul) sweets while saying \"Til-gul ghya, god god bola\".",
+                bhogiTitle: "Bhogi Bonfire",
+                bhogiDesc: "Old and unwanted items are burned in a bonfire to symbolize new beginnings and prosperity.",
+                cattleTitle: "Cattle Worship",
+                cattleDesc: "Cows and bulls are decorated with colors, bells, and garlands as a mark of gratitude for their service.",
+                rangolithTitle: "Rangoli Art",
+                rangoliDesc: "Beautiful colorful patterns are drawn at the entrance of homes to welcome prosperity and good luck.",
+                folkTitle: "Folk Songs",
+                folkDesc: "Traditional folk songs and dances are performed to celebrate the harvest season and community spirit.",
+                galleryTitle: "Festival Gallery",
+                contactTitle: "Contact Us",
+                locationTitle: "Location",
+                locationText: "Hyderabad, Telangana, India",
+                phoneTitle: "Phone",
+                emailTitle: "Email",
+                nameInput: "Your Name",
+                emailInput: "Your Email",
+                messageInput: "Your Message",
+                submitBtn: "Send Message",
+                footerTitle: "Sankranthi 2026",
+                footerDesc: "Celebrating the harvest festival with joy, tradition, and community spirit.",
+                quickLinksTitle: "Quick Links",
+                footerHome: "Home",
+                footerAbout: "About",
+                footerTraditions: "Traditions",
+                footerGallery: "Gallery",
+                festivalDatesTitle: "Festival Dates 2026",
+                bhogiDate: "Bhogi: January 13, 2026",
+                sankranthiDate: "Sankranthi: January 14, 2026",
+                kanumaDate: "Kanuma: January 15, 2026",
+                mukkanumaDate: "Mukkanuma: January 16, 2026",
+                copyright: "© 2026 Sankranthi Festival. All rights reserved. Made with ❤️ for the community.",
+                langText: "తెలుగు"
+            },
+            telugu: {
+                brandText: "సంక్రాంతి 2026",
+                navHome: "హోమ్",
+                navAbout: "పరిచయం",
+                navTraditions: "సంప్రదాయాలు",
+                navGallery: "గ్యాలరీ",
+                navContact: "సంప్రదింపులు",
+                heroTitle: "మకర సంక్రాంతి 2026",
+                heroSubtitle: "పంట పండుగను ఆనందంతో జరుపుకోండి",
+                countdownTitle: "సంక్రాంతికి మిగిలిన సమయం",
+                daysLabel: "రోజులు",
+                hoursLabel: "గంటలు",
+                minutesLabel: "నిమిషాలు",
+                secondsLabel: "సెకన్లు",
+                ctaButton: "మాతో జరుపుకోండి",
+                aboutTitle: "మకర సంక్రాంతి గురించి",
+                aboutText1: "మకర సంక్రాంతి భారతదేశంలో జరుపుకోబడే అత్యంత ముఖ్యమైన హిందూ పండుగలలో ఒకటి, ఇది సూర్యుడు మకర రాశిలోకి ప్రవేశించడాన్ని సూచిస్తుంది. ఈ శుభ దినం శీతాకాలం ముగింపును మరియు పొడవైన రోజుల ప్రారంభాన్ని సూచిస్తుంది.",
+                aboutText2: "ఈ పండుగ ఆంధ్రప్రదేశ్ మరియు తెలంగాణలో చాలా ఉత్సాహంతో జరుపుకోబడుతుంది, ఇక్కడ ఇది నాలుగు రోజుల పాటు జరుగుతుంది - భోగి, సంక్రాంతి, కనుమ మరియు ముక్కనుమ. ప్రతి రోజుకు దాని స్వంత ప్రాముఖ్యత మరియు ఆచారాలు ఉంటాయి.",
+                traditionsTitle: "పండుగ సంప్రదాయాలు",
+                kiteTitle: "గాలిపటాలు ఎగురవేయడం",
+                kiteDesc: "కుటుంబాలు మరియు స్నేహితులు పైకప్పుల మీద గాలిపటాల పోటీలో పాల్గొంటుండగా రంగురంగుల గాలిపటాలు ఆకాశాన్ని నింపుతాయి.",
+                sweetTitle: "నువ్వుల-బెల్లం మార్పిడి",
+                sweetDesc: "ప్రజలు నువ్వులు మరియు బెల్లం మిఠాయిలను మార్చుకుంటూ \"నువ్వుల-బెల్లం తీసుకో, మంచి మాటలు చెప్పు\" అంటారు.",
+                bhogiTitle: "భోగి మంట",
+                bhogiDesc: "కొత్త ప్రారంభాలు మరియు శ్రేయస్సును సూచించడానికి పాత మరియు అనవసర వస్తువులను మంటలో కాల్చివేస్తారు.",
+                cattleTitle: "పశువుల పూజ",
+                cattleDesc: "ఆవులు మరియు ఎద్దులను రంగులు, గంటలు మరియు దండలతో అలంకరిస్తారు వారి సేవకు కృతజ్ఞతగా.",
+                rangolithTitle: "రంగోలి కళ",
+                rangoliDesc: "శ్రేయస్సు మరియు అదృష్టాన్ని స్వాగతించడానికి ఇళ్ళ ప్రవేశ ద్వారం వద్ద అందమైన రంగురంగుల నమూనాలు గీస్తారు.",
+                folkTitle: "జానపద పాటలు",
+                folkDesc: "పంట కాలం మరియు సమాజ భావనను జరుపుకోవడానికి సంప్రదాయ జానపద పాటలు మరియు నృత్యాలు ప్రదర్శించబడతాయి.",
+                galleryTitle: "పండుగ గ్యాలరీ",
+                contactTitle: "మాతో సంప్రదించండి",
+                locationTitle: "స్థలం",
+                locationText: "హైదరాబాద్, తెలంగాణ, భారతదేశం",
+                phoneTitle: "ఫోన్",
+                emailTitle: "ఇమెయిల్",
+                nameInput: "మీ పేరు",
+                emailInput: "మీ ఇమెయిల్",
+                messageInput: "మీ సందేశం",
+                submitBtn: "సందేశం పంపండి",
+                footerTitle: "సంక్రాంతి 2026",
+                footerDesc: "ఆనందం, సంప్రదాయం మరియు సమాజ భావనతో పంట పండుగను జరుపుకోవడం.",
+                quickLinksTitle: "త్వరిత లింకులు",
+                footerHome: "హోమ్",
+                footerAbout: "పరిచయం",
+                footerTraditions: "సంప్రదాయాలు",
+                footerGallery: "గ్యాలరీ",
+                festivalDatesTitle: "పండుగ తేదీలు 2026",
+                bhogiDate: "భోగి: జనవరి 13, 2026",
+                sankranthiDate: "సంక్రాంతి: జనవరి 14, 2026",
+                kanumaDate: "కనుమ: జనవరి 15, 2026",
+                mukkanumaDate: "ముక్కనుమ: జనవరి 16, 2026",
+                copyright: "© 2026 సంక్రాంతి పండుగ. అన్ని హక్కులు పరిరక్షించబడ్డాయి. సమాజం కోసం ❤️తో తయారు చేయబడింది.",
+                langText: "English"
+            }
+        };
 
-<!-- Contact -->
-<section id="contact" class="contact">
-  <h2>సంప్రదించండి</h2>
-  <p>ఫోన్: +91 xxxxxxxxx</p>
-  <p>స్థానం: కాళేపల్లె గ్రామం</p>
-</section>
+        let currentLang = 'english';
 
-<footer>
-  <p>&copy; 2026 కాళేపల్లె సంక్రాంతి పండుగ</p>
-</footer>
+        // Language Toggle Function
+        function toggleLanguage() {
+            currentLang = currentLang === 'english' ? 'telugu' : 'english';
+            updateLanguage();
+        }
 
-<!-- JS -->
-<script>
-/* Countdown */
-const eventDate = new Date("Jan 14, 2026 06:00:00").getTime();
-setInterval(() => {
-  const now = new Date().getTime();
-  const d = eventDate - now;
-  if (d < 0) return;
-  days.innerText = Math.floor(d / (1000*60*60*24));
-  hours.innerText = Math.floor((d / (1000*60*60)) % 24);
-  minutes.innerText = Math.floor((d / (1000*60)) % 60);
-  seconds.innerText = Math.floor((d / 1000) % 60);
-}, 1000);
+        function updateLanguage() {
+            const lang = translations[currentLang];
+            
+            // Update all text elements
+            Object.keys(lang).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = lang[key];
+                    } else {
+                        element.textContent = lang[key];
+                    }
+                }
+            });
 
-/* Poll */
-function vote(val){
-  if(localStorage.getItem("voted")){
-    pollResult.innerText="✔️ మీరు ఇప్పటికే ఓటు వేశారు";
-    return;
-  }
-  localStorage.setItem("voted", val);
-  pollResult.innerText = val==="yes" ? "✅ అవును" : "❌ కాదు";
-  yesBtn.disabled=true;
-  noBtn.disabled=true;
-}
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLang === 'english' ? 'en' : 'te';
+        }
 
-window.onload=()=>{
-  if(localStorage.getItem("voted")){
-    yesBtn.disabled=true;
-    noBtn.disabled=true;
-    pollResult.innerText="✔️ మీరు ఇప్పటికే ఓటు వేశారు";
-  }
-}
-</script>
+        // Countdown Timer
+        function updateCountdown() {
+            const sankranthiDate = new Date('January 14, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = sankranthiDate - now;
 
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form Submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert(currentLang === 'english' ? 'Thank you for your message!' : 'మీ సందేశానికి ధన్యవాదాలు!');
+            this.reset();
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+
+        // Mobile menu toggle (if needed)
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

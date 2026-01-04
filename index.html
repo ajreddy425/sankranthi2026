@@ -7,28 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
-            <h1>కాళేపల్లె సంక్రాంతి పండుగ 2026</h1>
-            <p class="tagline">మన గ్రామం, మన ఆనందం, మన సంక్రాంతి</p>
+            <h1 class="header-title" data-te="కాళేపల్లె సంక్రాంతి పండుగ 2026" data-en="Kalepalle Sankranthi Festival 2026">కాళేపల్లె సంక్రాంతి పండుగ 2026</h1>
+            <p class="tagline" data-te="మన గ్రామం, మన ఆనందం, మన సంక్రాంతి" data-en="Our Village, Our Joy, Our Sankranthi">మన గ్రామం, మన ఆనందం, మన సంక్రాంతి</p>
         </div>
     </header>
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container navbar-container">
             <ul class="nav-list">
-                <li><a href="#home">హోమ్</a></li>
-                <li><a href="#about">గురించి</a></li>
-                <li><a href="#events">ఈవెంట్‌లు</a></li>
-                <li><a href="#games">ఆటలు</a></li>
-                <li><a href="#live-match">🔴 లైవ్</a></li>
-                <li><a href="#scores">స్కోర్‌లు</a></li>
-                <li><a href="#message">సందేశం</a></li>
-                <li><a href="#gallery">గ్యాలరీ</a></li>
-                <li><a href="#contact">సంప్రదించండి</a></li>
+                <li><a href="#home" class="nav-text" data-te="హోమ్" data-en="Home">హోమ్</a></li>
+                <li><a href="#about" class="nav-text" data-te="గురించి" data-en="About">గురించి</a></li>
+                <li><a href="#events" class="nav-text" data-te="ఈవెంట్‌లు" data-en="Events">ఈవెంట్‌లు</a></li>
+                <li><a href="#games" class="nav-text" data-te="ఆటలు" data-en="Games">ఆటలు</a></li>
+                <li><a href="#live-match" class="nav-text" data-te="🔴 లైవ్" data-en="🔴 Live">🔴 లైవ్</a></li>
+                <li><a href="#scores" class="nav-text" data-te="స్కోర్‌లు" data-en="Scores">స్కోర్‌లు</a></li>
+                <li><a href="#message" class="nav-text" data-te="సందేశం" data-en="Message">సందేశం</a></li>
+                <li><a href="#gallery" class="nav-text" data-te="గ్యాలరీ" data-en="Gallery">గ్యాలరీ</a></li>
+                <li><a href="#contact" class="nav-text" data-te="సంప్రదించండి" data-en="Contact">సంప్రదించండి</a></li>
             </ul>
+            <div class="language-toggle">
+                <button id="langToggle" class="lang-btn" onclick="toggleLanguage()">English</button>
+            </div>
         </div>
     </nav>
 
@@ -36,9 +38,9 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="white-only">సంక్రాంతి 2026 ని ఆనందంగా జరుపుకుందాం</h2>
-                <p>ప్రతి సంవత్సరం మాదిరిగా, ఈ సంవత్సరం కూడా మన గ్రామంలో సంక్రాంతి పండుగను ఘనంగా నిర్వహించాలనుకుంటున్నాము.</p>
-                <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView()">మరిన్ని వివరాలు</button>
+                <h2 class="white-only" data-te="సంక్రాంతి 2026 ని ఆనందంగా జరుపుకుందాం" data-en="Let's Celebrate Sankranthi 2026 with Joy">సంక్రాంతి 2026 ని ఆనందంగా జరుపుకుందాం</h2>
+                <p data-te="ప్రతి సంవత్సరం మాదిరిగా, ఈ సంవత్సరం కూడా మన గ్రామంలో సంక్రాంతి పండుగను ఘనంగా నిర్వహించాలనుకుంటున్నాము." data-en="Like every year, this year we plan to celebrate the Sankranthi festival grandly in our village.">ప్రతి సంవత్సరం మాదిరిగా, ఈ సంవత్సరం కూడా మన గ్రామంలో సంక్రాంతి పండుగను ఘనంగా నిర్వహించాలనుకుంటున్నాము.</p>
+                <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView()" data-te="మరిన్ని వివరాలు" data-en="More Details">మరిన్ని వివరాలు</button>
             </div>
         </div>
     </section>
@@ -46,8 +48,8 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="blue-header">సంక్రాంతి గురించి</h2>
-            <p>
+            <h2 class="blue-header" data-te="సంక్రాంతి గురించి" data-en="About Sankranthi">సంక్రాంతి గురించి</h2>
+            <p data-te="సంక్రాంతి భారతీయ సంస్కృతిలో అత్యంత ఆనందకరమైన పండుగ. ఇది రైతుల కష్టానికి ప్రతిఫలంగా, కొత్త సంవత్సరానికి ఆరంభంగా జరుపుకుంటారు.  మన కాళేపల్లె గ్రామంలో ఈ పండుగ కేవలం పండుగ మాత్రమే కాదు — ఇది మనందరిని ఒకచోట చేర్చే, మన బంధాలను మరింత బలపరిచే సందర్భం.  ఈ సంవత్సరం ప్రత్యేకంగా, గాలిపటాలు, ఆటలు, సాంస్కృతిక కార్యక్రమాలు, మరియు రుచికరమైన వంటకాలతో మన సంక్రాంతి మరింత రంగులమయం కానుంది.  ఎంత బిజీగా ఉన్నా, మన గ్రామానికి వచ్చి ఈ వేడుకలో పాల్గొని, మీ ఆనందాన్ని పంచుకోవడం ద్వారా ఈ పండుగను మరింత ప్రత్యేకంగా మార్చండి!" data-en="Sankranthi is the most joyful festival in Indian culture. It is celebrated as a reflection of farmers' hard work and the beginning of a new year. In our Kalepalle village, this festival is not just a celebration — it brings us together and strengthens our bonds. This year especially, our Sankranthi will be more colorful with kites, games, cultural programs, and delicious food. No matter how busy you are, come to our village and participate in these celebrations, share your joy and make this festival even more special!">
               సంక్రాంతి భారతీయ సంస్కృతిలో అత్యంత ఆనందకరమైన పండుగ. ఇది రైతుల కష్టానికి ప్రతిఫలంగా, కొత్త సంవత్సరానికి ఆరంభంగా జరుపుకుంటారు.  
               మన కాళేపల్లె గ్రామంలో ఈ పండుగ కేవలం పండుగ మాత్రమే కాదు — ఇది మనందరిని ఒకచోట చేర్చే, మన బంధాలను మరింత బలపరిచే సందర్భం.  
               ఈ సంవత్సరం ప్రత్యేకంగా, గాలిపటాలు, ఆటలు, సాంస్కృతిక కార్యక్రమాలు, మరియు రుచికరమైన వంటకాలతో మన సంక్రాంతి మరింత రంగులమయం కానుంది.  
@@ -60,21 +62,21 @@
     <!-- Events Section -->
 <section id="events" class="events">
   <div class="container">
-    <h2 class="blue-header">ఈవెంట్‌లు</h2>
+    <h2 class="blue-header" data-te="ఈవెంట్‌లు" data-en="Events">ఈవెంట్‌లు</h2>
     <div class="events-grid">
 
       <!-- Kite Festival -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/kite.jpg" alt="గాలిపటం ఉత్సవం" class="event-img">
-        <h3>🪁 గాలిపటం ఉత్సవం</h3>
-        <p>గ్రామం పైన గాలిపటాలను ఎగరుతూ సంక్రాంతిని జరుపుకుందాం</p>
+        <h3 class="event-title" data-te="🪁 గాలిపటం ఉత్సవం" data-en="🪁 Kite Festival">🪁 గాలిపటం ఉత్సవం</h3>
+        <p class="event-desc" data-te="గ్రామం పైన గాలిపటాలను ఎగరుతూ సంక్రాంతిని జరుపుకుందాం" data-en="Celebrate Sankranthi by flying kites over the village">గ్రామం పైన గాలిపటాలను ఎగరుతూ సంక్రాంతిని జరుపుకుందాం</p>
       </div>
 
       <!-- Food Festival -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/pongal.jpg" alt="పొంగల్" class="event-img">
-        <h3>🍚 పొంగల్ ప్రత్యేకం</h3>
-        <p>
+        <h3 class="event-title" data-te="🍚 పొంగల్ ప్రత్యేకం" data-en="🍚 Special Pongal">🍚 పొంగల్ ప్రత్యేకం</h3>
+        <p class="event-desc" data-te="పొంగల్ అనేది సంక్రాంతి పండుగలో అత్యంత ముఖ్యమైన వంటకం.కుటుంబ సభ్యులు, స్నేహితులతో కలిసి ఆనందంగా వరతూరు గంగమ్మ అమ్మవారి వద్ద పొంగల్ పెట్టడం,కోళ్ళు కొయడం వంటి సంప్రదాయాలు జరగుతాయి." data-en="Pongal is the most important dish in the Sankranthi festival. Family and friends gather to celebrate traditional customs like preparing Pongal and feeding animals.">
         పొంగల్ అనేది సంక్రాంతి పండుగలో అత్యంత ముఖ్యమైన వంటకం.కుటుంబ సభ్యులు, స్నేహితులతో కలిసి ఆనందంగా వరతూరు గంగమ్మ అమ్మవారి వద్ద పొంగల్ పెట్టడం,కోళ్ళు కొయడం వంటి సంప్రదాయాలు జరగుతాయి.
         </p>
       </div>
@@ -83,69 +85,69 @@
       <!-- Cultural Program -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/culture.jpeg" alt="సాంస్కృతిక కార్యక్రమం" class="event-img">
-        <h3>🎉 సాంస్కృతిక కార్యక్రమం</h3>
-        <p>నృత్యం, సంగీతం, నాటకాల ద్వారా సంక్రాంతిని జరుపుకుందాం</p>
+        <h3 class="event-title" data-te="🎉 సాంస్కృతిక కార్యక్రమం" data-en="🎉 Cultural Program">🎉 సాంస్కృతిక కార్యక్రమం</h3>
+        <p class="event-desc" data-te="నృత్యం, సంగీతం, నాటకాల ద్వారా సంక్రాంతిని జరుపుకుందాం" data-en="Celebrate Sankranthi through dance, music, and theater">నృత్యం, సంగీతం, నాటకాల ద్వారా సంక్రాంతిని జరుపుకుందాం</p>
       </div>
       <!-- Youth Volleyball Event --> 
        <div class="event-card"> 
          <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/volleyball.jpg" alt="యూత్ వాలీబాల్" class="event-img"> 
-         <h3>🏐 యూత్ వాలీబాల్</h3> 
-         <p> గ్రామ యువత కోసం ప్రత్యేక వాలీబాల్ పోటీ. జట్ల మధ్య ఉత్సాహభరితమైన ఆటలు జరుగుతాయి, క్రీడాస్ఫూర్తి మరియు స్నేహాన్ని పెంపొందించే అవకాశం. </p> 
+         <h3 class="event-title" data-te="🏐 యూత్ వాలీబాల్" data-en="🏐 Youth Volleyball">🏐 యూత్ వాలీబాల్</h3> 
+         <p class="event-desc" data-te="గ్రామ యువత కోసం ప్రత్యేక వాలీబాల్ పోటీ. జట్ల మధ్య ఉత్సాహభరితమైన ఆటలు జరుగుతాయి, క్రీడాస్ఫూర్తి మరియు స్నేహాన్ని పెంపొందించే అవకాశం." data-en="Special volleyball tournament for village youth. Exciting matches between teams, fostering sportsmanship and friendship."> గ్రామ యువత కోసం ప్రత్యేక వాలీబాల్ పోటీ. జట్ల మధ్య ఉత్సాహభరితమైన ఆటలు జరుగుతాయి, క్రీడాస్ఫూర్తి మరియు స్నేహాన్ని పెంపొందించే అవకాశం. </p> 
         </div>
       <!-- Chess -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/chess.jpeg" alt="Chess" class="event-img">
-        <h3>♟️ చెస్ పోటీ</h3>
-        <p>మేధస్సు మరియు వ్యూహాలతో చెస్ పోటీ</p>
+        <h3 class="event-title" data-te="♟️ చెస్ పోటీ" data-en="♟️ Chess Tournament">♟️ చెస్ పోటీ</h3>
+        <p class="event-desc" data-te="మేధస్సు మరియు వ్యూహాలతో చెస్ పోటీ" data-en="Chess tournament showcasing wit and strategy">మేధస్సు మరియు వ్యూహాలతో చెస్ పోటీ</p>
       </div>
 
       <!-- Kabaddi -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/kabaddi.jpg" alt="Kabaddi" class="event-img">
-        <h3>🤼 కబడ్డీ</h3>
-        <p>గ్రామ యువతతో ఉత్సాహభరితమైన కబడ్డీ మ్యాచ్</p>
+        <h3 class="event-title" data-te="🤼 కబడ్డీ" data-en="🤼 Kabaddi">🤼 కబడ్డీ</h3>
+        <p class="event-desc" data-te="గ్రామ యువతతో ఉత్సాహభరితమైన కబడ్డీ మ్యాచ్" data-en="Exciting Kabaddi match with village youth">గ్రామ యువత కోసం ఉత్సాహభరితమైన కబడ్డీ మ్యాచ్</p>
       </div>
       
       <!-- Childrens Cricket --> 
        <div class="event-card"> 
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/cricket.jpg" alt="పిల్లల క్రికెట్" class="event-img"> 
-        <h3>🏏 పిల్లల క్రికెట్</h3> 
-        <p> గ్రామంలోని చిన్నారుల కోసం ప్రత్యేక క్రికెట్ పోటీ. ఆటలో ఉత్సాహం, స్నేహం, మరియు క్రీడాస్ఫూర్తిని పెంపొందించే అవకాశం. </p> 
+        <h3 class="event-title" data-te="🏏 పిల్లల క్రికెట్" data-en="🏏 Kids Cricket">🏏 పిల్లల క్రికెట్</h3> 
+        <p class="event-desc" data-te="గ్రామంలోని చిన్నారుల కోసం ప్రత్యేక క్రికెట్ పోటీ. ఆటలో ఉత్సాహం, స్నేహం, మరియు క్రీడాస్ఫూర్తిని పెంపొందించే అవకాশం." data-en="Special cricket tournament for village kids. Opportunity to foster enthusiasm, friendship, and sportsmanship."> గ్రామంలోని చిన్నారుల కోసం ప్రత్యేక క్రికెట్ పోటీ. ఆటలో ఉత్సాహం, స్నేహం, మరియు క్రీడాస్ఫూర్తిని పెంపొందించే అవకాశం. </p> 
       </div>
 
       <!-- Carroms -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/carroms.jpg" alt="Carroms" class="event-img">
-        <h3>🎯 కేరమ్స్</h3>
-        <p>స్నేహితులతో సరదాగా కేరమ్స్ ఆట</p>
+        <h3 class="event-title" data-te="🎯 కేరమ్స్" data-en="🎯 Carroms">🎯 కేరమ్స్</h3>
+        <p class="event-desc" data-te="స్నేహితులతో సరదాగా కేరమ్స్ ఆట" data-en="Enjoy fun Carroms game with friends">స్నేహితులతో సరదాగా కేరమ్స్ ఆట</p>
       </div>
 
       <!-- Throw Ball -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/throwball.jpg" alt="Throw Ball" class="event-img">
-        <h3>🏐 త్రో బాల్</h3>
-        <p>మహిళల కోసం ప్రత్యేక త్రో బాల్ పోటీ</p>
+        <h3 class="event-title" data-te="🏐 త్రో బాల్" data-en="🏐 Throw Ball">🏐 త్రో బాల్</h3>
+        <p class="event-desc" data-te="మహిళల కోసం ప్రత్యేక త్రో బాల్ పోటీ" data-en="Special Throw Ball tournament for women">మహిళల కోసం ప్రత్యేక త్రో బాల్ పోటీ</p>
       </div>
 
       <!-- Tug of War -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/musical-chair-kids.jpg" alt="Kids Musical Chair" class="event-img">
-        <h3>🎶 పిల్లల సంగీత కుర్చీ</h3>
-        <p>పిల్లల కోసం సరదా సంగీత కుర్చీ ఆట</p>
+        <h3 class="event-title" data-te="🎶 పిల్లల సంగీత కుర్చీ" data-en="🎶 Kids Musical Chair">🎶 పిల్లల సంగీత కుర్చీ</h3>
+        <p class="event-desc" data-te="పిల్లల కోసం సరదా సంగీత కుర్చీ ఆట" data-en="Fun musical chair game for kids">పిల్లల కోసం సరదా సంగీత కుర్చీ ఆట</p>
       </div>
 
       <!-- Muddara Giri -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/muddara.jpg" alt="Muddara Giri" class="event-img">
-        <h3>🏋️ ముద్దర గిరి</h3>
-        <p>సాంప్రదాయ బలపరీక్ష ఆట</p>
+        <h3 class="event-title" data-te="🏋️ ముద్దర గిరి" data-en="🏋️ Muddara Giri">🏋️ ముద్దర గిరి</h3>
+        <p class="event-desc" data-te="సాంప్రదాయ బలపరీక్ష ఆట" data-en="Traditional strength testing game">సాంప్రదాయ బలపరీక్ష ఆట</p>
       </div>
 
       <!-- Rangoli -->
       <div class="event-card">
         <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/rangoli.jpeg" alt="Rangoli" class="event-img">
-        <h3>🌸 రంగోలి పోటీ</h3>
-        <p>రంగులమయమైన రంగోలి డిజైన్ పోటీ</p>
+        <h3 class="event-title" data-te="🌸 రంగోలి పోటీ" data-en="🌸 Rangoli Competition">🌸 రంగోలి పోటీ</h3>
+        <p class="event-desc" data-te="రంగులమయమైన రంగోలి డిజైన్ పోటీ" data-en="Colorful Rangoli design competition">రంగులమయమైన రంగోలి డిజైన్ పోటీ</p>
       </div>
 
       <!-- Dance -->
@@ -157,8 +159,8 @@
       <!-- Prize Distribution --> 
        <div class="event-card"> 
           <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/prize1.jpg" alt="ప్రైజ్ డిస్ట్రిబ్యూషన్" class="event-img"> 
-          <h3>🏆 బహుమతుల పంపిణీ</h3> 
-          <p> అన్ని ఆటలు మరియు కార్యక్రమాల్లో విజేతలకు బహుమతుల పంపిణీ. గ్రామ పెద్దలు మరియు ప్రత్యేక అతిథుల చేతుల మీదుగా బహుమతులు అందజేయబడతాయి. </p> 
+          <h3 class="event-title" data-te="🏆 బహుమతుల పంపిణీ" data-en="🏆 Prize Distribution">🏆 బహుమతుల పంపిణీ</h3> 
+          <p class="event-desc" data-te="అన్ని ఆటలు మరియు కార్యక్రమాల్లో విజేతలకు బహుమతుల పంపిణీ. గ్రామ పెద్దలు మరియు ప్రత్యేక అతిథుల చేతుల మీదుగా బహుమతులు అందజేయబడతాయి." data-en="Prize distribution for winners of all games and events. Awards presented by village elders and special guests."> అన్ని ఆటలు మరియు కార్యక్రమాల్లో విజేతలకు బహుమతుల పంపిణీ. గ్రామ పెద్దలు మరియు ప్రత్యేక అతిథుల చేతుల మీదుగా బహుమతులు అందజేయబడతాయి. </p> 
         </div>
 
     </div>
@@ -169,29 +171,29 @@
     <!-- Games Section -->
     <section id="games" class="games">
       <div class="container">
-        <h2>🎮 సంక్రాంతి ఆటల షెడ్యూల్</h2>
+        <h2 data-te="🎮 సంక్రాంతి ఆటల షెడ్యూల్" data-en="🎮 Sankranthi Games Schedule">🎮 సంక్రాంతి ఆటల షెడ్యూల్</h2>
       </div>
     </section>
 
 <!-- Message Section -->
 <section id="message" class="message">
   <div class="container">
-    <h2>గ్రామ సందేశం</h2>
+    <h2 data-te="గ్రామ సందేశం" data-en="Village Message">గ్రామ సందేశం</h2>
     <div class="message-box">
-      <p style="color: #388e3c; font-weight: bold; font-size: 1.1em;">ప్రియమైన కాళేపల్లె గ్రామస్తులారా,</p>
-      <p>ప్రతి రోజు మనం ఉద్యోగాలు, వ్యవసాయ పనులు, ఇతర బాధ్యతలతో బిజీగా ఉంటాము. అలాంటి రోజుల్లో సంక్రాంతి పండుగ మనందరినీ ఒకచోట చేర్చే ప్రత్యేకమైన సందర్భం.</p>
-      <p>ఈసారి సంక్రాంతి వేడుకలను మరింత ప్రత్యేకంగా నిర్వహించేందుకు మీ అభిప్రాయాలు, సూచనలు తెలియజేయండి.</p>
-      <p style="color: #b71c1c; font-weight: bold;">మీ విలువైన సూచనలు మన కార్యక్రమాన్ని విజయవంతంగా నిర్వహించడంలో ఎంతో సహాయపడతాయి.</p>
-      <p style="color: #1976d2; font-weight: bold;">అందరూ ఈ వేడుకల్లో పాల్గొని, సంక్రాంతి పండుగ వాతావరణాన్ని తీసుకురావడంలో భాగస్వాములవుదాం.</p>
-      <p style="color: #fbc02d; font-weight: bold;">ధన్యవాదాలు!</p>
+      <p style="color: #388e3c; font-weight: bold; font-size: 1.1em;" data-te="ప్రియమైన కాళేపల్లె గ్రామస్తులారా," data-en="Dear People of Kalepalle Village,">ప్రియమైన కాళేపల్లె గ్రామస్తులారా,</p>
+      <p data-te="ప్రతి రోజు మనం ఉద్యోగాలు, వ్యవసాయ పనులు, ఇతర బాధ్యతలతో బిజీగా ఉంటాము. అలాంటి రోజుల్లో సంక్రాంతి పండుగ మనందరినీ ఒకచోట చేర్చే ప్రత్యేకమైన సందర్భం." data-en="Every day we are busy with work, farming, and other responsibilities. In such times, the Sankranthi festival is a special occasion that brings us all together.">ప్రతి రోజు మనం ఉద్యోగాలు, వ్యవసాయ పనులు, ఇతర బాధ్యతలతో బిజీగా ఉంటాము. అలాంటి రోజుల్లో సంక్రాంతి పండుగ మనందరినీ ఒకచోట చేర్చే ప్రత్యేకమైన సందర్భం.</p>
+      <p data-te="ఈసారి సంక్రాంతి వేడుకలను మరింత ప్రత్యేకంగా నిర్వహించేందుకు మీ అభిప్రాయాలు, సూచనలు తెలియజేయండి." data-en="Please share your suggestions and opinions to make this Sankranthi celebration even more special.">ఈసారి సంక్రాంతి వేడుకలను మరింత ప్రత్యేకంగా నిర్వహించేందుకు మీ అభిప్రాయాలు, సూచనలు తెలియజేయండి.</p>
+      <p style="color: #b71c1c; font-weight: bold;" data-te="మీ విలువైన సూచనలు మన కార్యక్రమాన్ని విజయవంతంగా నిర్వహించడంలో ఎంతో సహాయపడతాయి." data-en="Your valuable suggestions will greatly help us conduct the program successfully.">మీ విలువైన సూచనలు మన కార్యక్రమాన్ని విజయవంతంగా నిర్వహించడంలో ఎంతో సహాయపడతాయి.</p>
+      <p style="color: #1976d2; font-weight: bold;" data-te="అందరూ ఈ వేడుకల్లో పాల్గొని, సంక్రాంతి పండుగ వాతావరణాన్ని తీసుకురావడంలో భాగస్వాములవుదాం." data-en="Let us all participate in these celebrations and be part of creating the Sankranthi festive atmosphere.">అందరూ ఈ వేడుకల్లో పాల్గొని, సంక్రాంతి పండుగ వాతావరణాన్ని తీసుకురావడంలో భాగస్వాములవుదాం.</p>
+      <p style="color: #fbc02d; font-weight: bold;" data-te="ధన్యవాదాలు!" data-en="Thank you!">ధన్యవాదాలు!</p>
     </div>
 
     <!-- Poll Section -->
-    <div id="poll" style="margin-top:20px;">
-      <h3>మీ అభిప్రాయం చెప్పండి?</h3>
-      <button onclick="submitPoll('yes')" id="yesBtn">✅ అవును</button>
-      <button onclick="submitPoll('no')" id="noBtn">❌ కాదు</button>
-      <p id="pollResult" style="margin-top:10px; font-weight:bold; color:#388e3c;"></p>
+    <div id="poll" style="margin-top:20px; padding: 1.5rem; background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-radius: 10px; box-shadow: 0 3px 10px rgba(46, 125, 50, 0.1);">
+      <h3 style="color: #2e7d32; font-weight: 700; margin-top: 0;">మీ అభిప్రాయం చెప్పండి?</h3>
+      <button onclick="submitPoll('yes')" id="yesBtn" style="padding: 0.7rem 1.5rem; margin: 0.5rem; background: linear-gradient(135deg, #4caf50, #45a049); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 3px 8px rgba(76, 175, 80, 0.3);">✅ అవును</button>
+      <button onclick="submitPoll('no')" id="noBtn" style="padding: 0.7rem 1.5rem; margin: 0.5rem; background: linear-gradient(135deg, #f44336, #da190b); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 3px 8px rgba(244, 67, 54, 0.3);">❌ కాదు</button>
+      <p id="pollResult" style="margin-top:15px; font-weight:600; color:#2e7d32; font-size: 1.05rem;"></p>
     </div>
   </div>
 </section>
@@ -223,8 +225,8 @@ function submitPoll(choice) {
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="blue-header">గ్యాలరీ</h2>
-            <p>ఇక్కడ మీరు సంక్రాంతి పండుగలోని అందమైన క్షణాల ఫోటోలు చూడవచ్చు</p>
+            <h2 class="blue-header" data-te="గ్యాలరీ" data-en="Gallery">గ్యాలరీ</h2>
+            <p data-te="ఇక్కడ మీరు సంక్రాంతి పండుగలోని అందమైన క్షణాల ఫోటోలు చూడవచ్చు" data-en="View beautiful moments from Sankranthi celebration">ఇక్కడ మీరు సంక్రాంతి పండుగలోని అందమైన క్షణాల ఫోటోలు చూడవచ్చు</p>
             <div class="gallery-grid">
                 <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Gallery/1.jpg" alt="Gallery Image 1" class="gallery-img">
                 <img src="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Gallery/2.jpg" alt="Gallery Image 2" class="gallery-img">
@@ -242,33 +244,70 @@ function submitPoll(choice) {
     <!-- Live Match Section -->
     <section id="live-match" class="live-match">
         <div class="container">
-            <h2>🔴 లైవ్ మ్యాచ్</h2>
-            <p>ఇక్కడ మీరు లైవ్ మ్యాచ్‌లను చూడవచ్చు. త్వరలో లింక్ అందుబాటులో ఉంటుంది!</p>
+            <h2 data-te="🔴 లైవ్ మ్యాచ్" data-en="🔴 Live Match">🔴 లైవ్ మ్యాచ్</h2>
+            <p data-te="ఇక్కడ మీరు లైవ్ మ్యాచ్‌లను చూడవచ్చు. త్వరలో లింక్ అందుబాటులో ఉంటుంది!" data-en="Watch live matches here. Link will be available soon!">ఇక్కడ మీరు లైవ్ మ్యాచ్‌లను చూడవచ్చు. త్వరలో లింక్ అందుబాటులో ఉంటుంది!</p>
         </div>
     </section>
 
     <!-- Scores Section --> 
     <section id="scores" class="scores">
         <div class="container">
-            <h2>స్కోర్‌లు</h2>
-            <p>ఇక్కడ మీరు తాజా స్కోర్‌లను చూడవచ్చు. త్వరలో వివరాలు అందుబాటులో ఉంటాయి!</p>
+            <h2 data-te="స్కోర్‌లు" data-en="Scores">స్కోర్‌లు</h2>
+            <p data-te="ఇక్కడ మీరు తాజా స్కోర్‌లను చూడవచ్చు. త్వరలో వివరాలు అందుబాటులో ఉంటాయి!" data-en="View latest scores here. Details will be available soon!">ఇక్కడ మీరు తాజా స్కోర్‌లను చూడవచ్చు. త్వరలో వివరాలు అందుబాటులో ఉంటాయి!</p>
         </div>
     </section>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="blue-header">సంప్రదించండి</h2>
-            <p>మీ ప్రశ్నలు లేదా సూచనల కోసం, దయచేసి మమ్మల్ని సంప్రదించండి:</p>
+            <h2 class="blue-header" data-te="సంప్రదించండి" data-en="Contact Us">సంప్రదించండి</h2>
+            <p data-te="మీ ప్రశ్నలు లేదా సూచనల కోసం, దయచేసి మమ్మల్ని సంప్రదించండి:" data-en="For any questions or suggestions, please contact us:">మీ ప్రశ్నలు లేదా సూచనల కోసం, దయచేసి మమ్మల్ని సంప్రదించండి:</p>
             <ul>
-                <li>ఫోన్: +91 xxxxxxxxx</li>
-                <li>ఇమెయిల్: contact@kalepalle.com</li>
-                <li>స్థానం: కాళేపల్లె గ్రామం,GD నెల్లూరు మండలం, చిత్తూరు జిల్లా, ఆంధ్రప్రదేశ్</li>
+                <li data-te="ఫోన్: +91 xxxxxxxxx" data-en="Phone: +91 xxxxxxxxx">ఫోన్: +91 xxxxxxxxx</li>
+                <li data-te="ఇమెయిల్: contact@kalepalle.com" data-en="Email: contact@kalepalle.com">ఇమెయిల్: contact@kalepalle.com</li>
+                <li data-te="స్థానం: కాళేపల్లె గ్రామం,GD నెల్లూరు మండలం, చిత్తూరు జిల్లా, ఆంధ్రప్రదేశ్" data-en="Location: Kalepalle Village, GD Nellore Mandal, Chittoor District, Andhra Pradesh">స్థానం: కాళేపల్లె గ్రామం,GD నెల్లూరు మండలం, చిత్తూరు జిల్లా, ఆంధ్రప్రదేశ్</li>
             </ul>
         </div>
     </section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 కాళేపల్లె సంక్రాంతి పండుగ. All rights reserved.</p>
+            <p data-te="&copy; 2026 కాళేపల్లె సంక్రాంతి పండుగ. All rights reserved." data-en="&copy; 2026 Kalepalle Sankranthi Festival. All rights reserved.">&copy; 2026 కాళేపల్లె సంక్రాంతి పండుగ. All rights reserved.</p>
         </div>
     </footer>
+
+<script>
+// Language toggle functionality
+let currentLanguage = localStorage.getItem('selectedLanguage') || 'te';
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'te' ? 'en' : 'te';
+    localStorage.setItem('selectedLanguage', currentLanguage);
+    applyLanguage();
+}
+
+function applyLanguage() {
+    const isEnglish = currentLanguage === 'en';
+    const langBtn = document.getElementById('langToggle');
+    
+    // Update button text
+    langBtn.textContent = isEnglish ? 'తెలుగు' : 'English';
+    
+    // Update all elements with language attributes
+    document.querySelectorAll('[data-te][data-en]').forEach(el => {
+        const text = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-te');
+        
+        // For button elements, update button text but keep children
+        if (el.tagName === 'BUTTON') {
+            // Check if button has only text (no child elements besides text nodes)
+            if (el.children.length === 0) {
+                el.textContent = text;
+            }
+        } else {
+            el.textContent = text;
+        }
+    });
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', applyLanguage);
+</script>

@@ -1,16 +1,32 @@
 body {
     font-family: 'Noto Sans Telugu', sans-serif;
-    background: linear-gradient(to bottom, #fff8e1, #ffe0b2);
+    background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 50%, #ffcc80 100%);
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* Header */
 .header {
-    background: #ff9800;
+    background: linear-gradient(135deg, #ff9800 0%, #fb8c00 100%);
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header .tagline {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.95;
 }
 
 /* Hero Section */
@@ -20,24 +36,39 @@ body {
     background-size: cover;
     color: #fff;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     margin-bottom: 40px; /* gap below hero section */
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .hero::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.4); /* overlay for readability */
+    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%); /* overlay for readability */
     z-index: 1;
 }
 .hero .container {
     position: relative;
     z-index: 2;
 }
-.hero h2, .hero p {
+.hero h2 {
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+    line-height: 1.8;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.hero p {
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     line-height: 1.8;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
 }
 
 /* About Section */
@@ -46,25 +77,33 @@ body {
     background: url('https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/photos/kids.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
-    padding: 3rem 0;
+    padding: 4rem 2rem;
     margin-top: 40px; /* gap above about section */
 }
 .about::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5); /* overlay for better contrast */
+    background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 100%); /* overlay for better contrast */
     z-index: 1;
 }
 .about .container {
     position: relative;
     z-index: 2;
 }
-.about h2, .about p {
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+.about h2 {
+    color: #ffc107;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
     line-height: 1.8;
-    font-size: 1.1em;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.about p {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    line-height: 1.9;
+    font-size: 1.05em;
 }
 
 /* Special heading colors */
@@ -77,14 +116,26 @@ body {
 
 /* Navbar */
 .navbar {
-    background: green;
+    background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .nav-list {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
     margin: 0;
+    flex-wrap: wrap;
 }
 .nav-list li {
     margin: 0 1rem;
@@ -92,10 +143,39 @@ body {
 .nav-list a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
 }
 .nav-list a:hover {
-    color: #fbc02d;
+    color: #fff;
+    background: rgba(255, 193, 7, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Language Toggle */
+.language-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: white;
+    color: #2e7d32;
+    transform: scale(1.05);
 }
 
 /* Sections */
@@ -105,6 +185,9 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 /* Container */
@@ -117,38 +200,63 @@ section h2 {
 /* Events */
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 .event-card {
-    background: #fff3e0;
-    padding: 1.2rem;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
 }
 .event-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(255, 152, 0, 0.3);
+    border-color: #ff9800;
+}
+
+.event-card h3 {
+    color: #d84315;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 /* Thumbnail images */
 .event-img {
     width: 100%;
     max-width: 150px;
-    height: auto;
+    height: 150px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     margin: 0 auto 0.75rem;
     display: block;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-img {
+    transform: scale(1.05);
 }
 
 /* Message box */
 .message-box {
-    background: #f1f8e9;
-    padding: 2rem;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+    padding: 2.5rem;
+    border-radius: 12px;
     line-height: 1.8;
+    border-left: 5px solid #2e7d32;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+}
+
+.message h2 {
+    color: #2e7d32 !important;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
 /* Scores */
@@ -186,16 +294,25 @@ section h2 {
 
 /* Buttons */
 .btn-primary {
-    background: #1976d2;
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
     color: white;
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 2rem;
     border: none;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 25px;
     font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
 }
 .btn-primary:hover {
-    background: #0d47a1;
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }
 
 /* Responsive tweaks */
@@ -236,71 +353,106 @@ section h2 {
 }
 
 .footer {
-  background-color: green;   /* sets the background to green */
+  background: linear-gradient(90deg, #2e7d32 0%, #388e3c 100%);   /* sets the background to green */
   text-align: center;
-  padding: 0.5rem;           /* same as navbar padding */
+  padding: 2rem 1rem;           /* same as navbar padding */
   margin-top: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer p {
   color: white;              /* makes the text stand out on green */
-  font-weight: bold;
+  font-weight: 600;
   margin: 0;                 /* removes extra spacing around text */
+  font-size: 1rem;
+  letter-spacing: 0.3px;
 }
 
 .contact {
-  background-color: #fff8e1;   /* soft yellow background */
-  padding: 40px 20px;
+  background: linear-gradient(135deg, #fff8e1 0%, #fff9c4 100%);   /* soft yellow background */
+  padding: 3rem 2rem;
   text-align: center;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .contact h2 {
   color: #2e7d32 !important;   /* festive green heading */
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .contact p {
   color: #1565c0 !important;   /* deep blue for contrast */
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .contact ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .contact li {
-  font-size: 16px;
+  font-size: 1rem;
   color: #4e342e !important;   /* deep brown for list items */
-  margin-bottom: 10px;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact li:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(5px);
 }
 
 /* Gallery Section */
 .gallery {
-  padding: 40px 0;             /* spacing above and below */
+  padding: 3rem 0;             /* spacing above and below */
   text-align: center;          /* center heading and description */
-  background: #fff7e6;         /* optional festive background */
+  background: linear-gradient(135deg, #fff7e6 0%, #fff9c4 100%);         /* optional festive background */
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gallery > .container > p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 .gallery-grid {
   display: grid;               
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-  gap: 15px;                   
-  margin-top: 20px;            
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 1.5rem;                   
+  margin-top: 2rem;            
 }
 
 .gallery-img {
   width: 100%;                 
-  height: 160px;               
+  height: 180px;               
   object-fit: cover;           
-  border-radius: 8px;          
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-  transition: transform 0.3s ease;
+  border-radius: 10px;          
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15); 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid transparent;
 }
 
 .gallery-img:hover {
-  transform: scale(1.05);      
+  transform: scale(1.08) rotateZ(2deg);      
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  border-color: #ff9800;
 }

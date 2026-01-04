@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>కాళేపల్లె సంక్రాంతి పండుగ 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -260,18 +261,90 @@ function submitPoll(choice) {
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="blue-header" data-te="సంప్రదించండి" data-en="Contact Us">సంప్రదించండి</h2>
-            <p data-te="మీ ప్రశ్నలు లేదా సూచనల కోసం, దయచేసి మమ్మల్ని సంప్రదించండి:" data-en="For any questions or suggestions, please contact us:">మీ ప్రశ్నలు లేదా సూచనల కోసం, దయచేసి మమ్మల్ని సంప్రదించండి:</p>
-            <ul>
-                <li data-te="ఫోన్: +91 xxxxxxxxx" data-en="Phone: +91 xxxxxxxxx">ఫోన్: +91 xxxxxxxxx</li>
-                <li data-te="ఇమెయిల్: contact@kalepalle.com" data-en="Email: contact@kalepalle.com">ఇమెయిల్: contact@kalepalle.com</li>
-                <li data-te="స్థానం: కాళేపల్లె గ్రామం,GD నెల్లూరు మండలం, చిత్తూరు జిల్లా, ఆంధ్రప్రదేశ్" data-en="Location: Kalepalle Village, GD Nellore Mandal, Chittoor District, Andhra Pradesh">స్థానం: కాళేపల్లె గ్రామం,GD నెల్లూరు మండలం, చిత్తూరు జిల్లా, ఆంధ్రప్రదేశ్</li>
-            </ul>
+            <div class="decorative-line"></div>
+            
+            <div class="contact-content">
+                <!-- Left Side: Contact Info with Icons -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-te="స్థానం" data-en="Location">స్థానం</h4>
+                            <p data-te="కాళేపల్లె గ్రామం, చిత్తూరు జిల్లా, ఆంధ్రప్రదేశ్" data-en="Kalepalle Village, Chittoor District, Andhra Pradesh">కాళేపల్లె గ్రామం, చిత్తూరు జిల్లా, ఆంధ్రప్రదేశ్</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-te="ఫోన్" data-en="Phone">ఫోన్</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 data-te="ఇమెయిల్" data-en="Email">ఇమెయిల్</h4>
+                            <p>info@sankranthi2026.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Form -->
+                <div class="contact-form">
+                    <form onsubmit="handleFormSubmit(event)">
+                        <input type="text" placeholder="Your Name" id="nameInput" class="form-input" data-te-placeholder="మీ పేరు" data-en-placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" id="emailInput" class="form-input" data-te-placeholder="మీ ఇమెయిల్" data-en-placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" id="messageInput" class="form-input" rows="5" data-te-placeholder="మీ సందేశం" data-en-placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn" id="submitBtn" data-te="సందేశం పంపండి" data-en="Send Message">సందేశం పంపండి</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p data-te="&copy; 2026 కాళేపల్లె సంక్రాంతి పండుగ. All rights reserved." data-en="&copy; 2026 Kalepalle Sankranthi Festival. All rights reserved.">&copy; 2026 కాళేపల్లె సంక్రాంతి పండుగ. All rights reserved.</p>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3 id="footerTitle" data-te="సంక్రాంతి 2026" data-en="Sankranthi 2026">సంక్రాంతి 2026</h3>
+                <p id="footerDesc" data-te="ఆనందం, సంప్రదాయం మరియు సమాజ భావనతో పండుగను జరుపుకోవడం." data-en="Celebrating the harvest festival with joy, tradition, and community spirit.">ఆనందం, సంప్రదాయం మరియు సమాజ భావనతో పండుగను జరుపుకోవడం.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 id="quickLinksTitle" data-te="త్వరిత లింకులు" data-en="Quick Links">త్వరిత లింకులు</h4>
+                <ul class="footer-links">
+                    <li><a href="#home" id="footerHome" data-te="హోమ్" data-en="Home">హోమ్</a></li>
+                    <li><a href="#about" id="footerAbout" data-te="గురించి" data-en="About">గురించి</a></li>
+                    <li><a href="#events" id="footerEvents" data-te="ఈవెంట్‌లు" data-en="Traditions">ఈవెంట్‌లు</a></li>
+                    <li><a href="#gallery" id="footerGallery" data-te="గ్యాలరీ" data-en="Gallery">గ్యాలరీ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 id="festivalDatesTitle" data-te="సంక్రాంతి తేదీలు 2026" data-en="Festival Dates 2026">సంక్రాంతి తేదీలు 2026</h4>
+                <ul class="footer-dates">
+                    <li id="bhogiDate" data-te="భోగి: జనవరి 14, 2026" data-en="Bhogi: January 14, 2026">భోగి: జనవరి 14, 2026</li>
+                    <li id="sankranthiDate" data-te="సంక్రాంతి: జనవరి 15, 2026" data-en="Sankranthi: January 15, 2026">సంక్రాంతి: జనవరి 15, 2026</li>
+                    <li id="pongelDate" data-te="పొంగల్: జనవరి 16, 2026" data-en="Pongal: January 16, 2026">పొంగల్: జనవరి 16, 2026</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p id="copyright" data-te="© 2026 సంక్రాంతి పండుగ. అన్ని హక్కులు పరిరక్షించబడ్డాయి." data-en="© 2026 Sankranthi Festival. All rights reserved.">© 2026 సంక్రాంతి పండుగ. అన్ని హక్కులు పరిరక్షించబడ్డాయి.</p>
         </div>
     </footer>
 
@@ -310,4 +383,13 @@ function applyLanguage() {
 
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', applyLanguage);
+
+// Form submission handler
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('nameInput').value;
+    const message = currentLanguage === 'en' ? 'Thank you for your message!' : 'మీ సందేశానికి ధన్యవాదాలు!';
+    alert(message);
+    event.target.reset();
+}
 </script>

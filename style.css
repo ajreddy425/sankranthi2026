@@ -1,9 +1,17 @@
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Noto Sans Telugu', sans-serif;
-    background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 50%, #ffcc80 100%);
+    background: linear-gradient(180deg, #fff8e1 0%, #ffe0b2 50%, #ffcc80 100%);
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Floating Notification Bar */
@@ -267,6 +275,8 @@ section h2 {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Events */
@@ -787,61 +797,6 @@ section h2 {
   line-height: 1.5;
 }
 
-/* Visitor Stats Section */
-.visitor-stats-section {
-  padding: 2rem 0;
-  background: linear-gradient(135deg, #FF6B9D 0%, #FFA502 50%, #26DE81 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.visitor-stats-card {
-  background: rgba(255, 255, 255, 0.98);
-  padding: 2rem;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.visitor-stats-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.visitor-icon {
-  font-size: 3.5rem;
-  animation: pulse-icon 2s ease-in-out infinite;
-}
-
-@keyframes pulse-icon {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-.visitor-info {
-  flex: 1;
-}
-
-.visitor-info h3 {
-  font-size: 1.4rem;
-  color: #333;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-}
-
-.visitor-count {
-  font-size: 1.8rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #FF6B9D 0%, #FFA502 50%, #26DE81 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -889,3 +844,6 @@ section h2 {
     font-size: 1.5rem;
   }
 }
+
+}
+

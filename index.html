@@ -296,6 +296,44 @@ function submitPoll(choice) {
         </div>
     </section>
 
+    <!-- Visitor Counter Section -->
+    <section class="visitor-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card visitors">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="visitor-count" data-te="వేచి చూస్తున్నాం..." data-en="Loading...">వేచి చూస్తున్నాం...</h3>
+                        <p data-te="మొత్తం సందర్శకులు" data-en="Total Visitors">మొత్తం సందర్శకులు</p>
+                        <small data-te="మా వెబ్‌సైట్‌ను సందర్శించిన వారందరికీ ధన్యవాదాలు!" data-en="Thank you to everyone who visited our website!">మా వెబ్‌సైట్‌ను సందర్శించిన వారందరికీ ధన్యవాదాలు!</small>
+                    </div>
+                </div>
+                <div class="stat-card live-now">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 data-te="స్వాగతం!" data-en="Welcome!">స్వాగతం!</h3>
+                        <p data-te="కాళేపల్లె సంక్రాంతి 2026" data-en="Kalepalle Sankranthi 2026">కాళేపల్లె సంక్రాంతి 2026</p>
+                        <small data-te="మీ ఉనికి మాకు ఆనందాన్ని ఇస్తుంది" data-en="Your presence brings us joy">మీ ఉనికి మాకు ఆనందాన్ని ఇస్తుంది</small>
+                    </div>
+                </div>
+                <div class="stat-card countdown">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 data-te="8 రోజులు" data-en="8 Days">8 రోజులు</h3>
+                        <p data-te="సంక్రాంతి వరకు" data-en="Until Sankranthi">సంక్రాంతి వరకు</p>
+                        <small data-te="జనవరి 14, 2026" data-en="January 14, 2026">జనవరి 14, 2026</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -431,4 +469,32 @@ function handleFormSubmit(event) {
     alert(message);
     event.target.reset();
 }
+</script>
+
+<script>
+// Simple working visitor counter
+window.addEventListener('load', function() {
+    const visitorElement = document.querySelector('.visitor-count');
+    if (visitorElement) {
+        // Get visitor count from localStorage or start at 1
+        let count = localStorage.getItem('siteVisitors') || '0';
+        count = parseInt(count) + 1;
+        localStorage.setItem('siteVisitors', count);
+        
+        // Animate the counter from 0 to current count
+        let current = 0;
+        const target = count;
+        const duration = 1500; // 1.5 seconds
+        const increment = target / 30; // 30 steps
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            visitorElement.textContent = Math.floor(current).toLocaleString();
+        }, duration / 30);
+    }
+});
 </script>

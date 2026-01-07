@@ -41,9 +41,9 @@
         <span class="notification-label-red" data-te="అప్‌డేట్‌లు" data-en="Updates">Updates</span>
         <div class="notification-scroll">
             <span class="notification-content">
-                <span class="notification-badge" data-te="💰 సహాయం" data-en="💰 SUPPORT">💰 SUPPORT</span>
-                <span class="notification-text" data-te="దయచేసి సంక్రాంతి వేడుకల కోసం మీ సహకారం అందించండి - నోటీసులు విభాగంలో డబ్బు సేకరణ వివరాలు చూడండి" data-en="Please contribute for Sankranthi celebrations - View donation collection details under notice section">దయచేసి సంక్రాంతి వేడుకల కోసం మీ సహకారం అందించండి - నోటీసులు విభాగంలో డబ్బు సేకరణ వివరాలు చూడండి</span>
-                <span class="notification-badge" data-te="💰 సహాయం" data-en="💰 SUPPORT">💰 SUPPORT</span>
+                <span class="notification-badge" data-te="🆕 కొత్త" data-en="🆕 NEW">🆕 NEW</span>
+                <span class="notification-text" data-te="దయచేసి సంక్రాంతి వేడుకలపై మీ అభిప్రాయం పంచుకోండి" data-en="Please share your opinion on the Sankranthi celebrations">దయచేసి సంక్రాంతి వేడుకలపై మీ అభిప్రాయం పంచుకోండి</span>
+                <span class="notification-badge" data-te="🆕 కొత్త" data-en="🆕 NEW">🆕 NEW</span>
             </span>
         </div>
     </div>
@@ -72,16 +72,6 @@
                     <div class="notice-buttons">
                         <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/poster/Sankranthi2026.jpg" target="_blank" class="notice-btn view-btn" data-te="చూడండి" data-en="View">చూడండి</a>
                         <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/poster/Sankranthi2026.jpg" download="Sankranthi2026_Poster.jpg" class="notice-btn download-btn" data-te="డౌన్‌లోడ్" data-en="Download">డౌన్‌లోడ్</a>
-                    </div>
-                </div>
-                
-                <div class="notice-card notice-2" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
-                    <div class="notice-date" data-te="జనవరి 7, 2026" data-en="January 7, 2026">జనవరి 7, 2026</div>
-                    <div class="notice-title" data-te="💰 డబ్బు సేకరణ" data-en="💰 Contribution Collection">💰 డబ్బు సేకరణ</div>
-                    <div class="notice-text" data-te="సంక్రాంతి వేడుకల కోసం మీ వాలంటీర్ సహకారం అవసరం" data-en="Your voluntary contribution is needed for Sankranthi celebrations">సంక్రాంతి వేడుకల కోసం మీ వాలంటీర్ సహకారం అవసరం</div>
-                    <div class="notice-buttons">
-                        <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Paymentcollection.jpeg" target="_blank" class="notice-btn view-btn" data-te="చూడండి" data-en="View">చూడండి</a>
-                        <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Paymentcollection.jpeg" download="Payment_Collection_Details.jpg" class="notice-btn download-btn" data-te="డౌన్‌లోడ్" data-en="Download">డౌన్‌లోడ్</a>
                     </div>
                 </div>
             </div>
@@ -314,21 +304,21 @@ function showVoteStats() {
   const statsDiv = document.getElementById('statsDisplay');
   const voteCounts = JSON.parse(localStorage.getItem('voteCounts')) || { yes: 0, no: 0 };
   
-  // Count unique votes
-  const uniqueVotes = getUniqueVoteCount();
+  // Calculate total votes from actual counts
+  const totalVotes = voteCounts.yes + voteCounts.no;
   
   const isEnglish = currentLanguage === 'en';
   
   if (statsDiv.style.display === 'none' || !statsDiv.style.display) {
-    const totalText = isEnglish ? 'Total Unique Votes' : 'మొత్తం ప్రత్యేక ఓట్లు';
+    const totalText = isEnglish ? 'Total Votes' : 'మొత్తం ఓట్లు';
     const yesText = isEnglish ? 'Yes' : 'అవును';
     const noText = isEnglish ? 'No' : 'కాదు';
     
     statsDiv.innerHTML = `
       <div style="text-align: center; font-weight: 600; color: #2e7d32;">
-        <div>${totalText}: ${uniqueVotes.total}</div>
-        <div style="margin-top: 5px;">✅ ${yesText}: ${voteCounts.yes} (${uniqueVotes.total > 0 ? Math.round((voteCounts.yes/uniqueVotes.total)*100) : 0}%)</div>
-        <div style="margin-top: 5px;">❌ ${noText}: ${voteCounts.no} (${uniqueVotes.total > 0 ? Math.round((voteCounts.no/uniqueVotes.total)*100) : 0}%)</div>
+        <div>${totalText}: ${totalVotes}</div>
+        <div style="margin-top: 5px;">✅ ${yesText}: ${voteCounts.yes} (${totalVotes > 0 ? Math.round((voteCounts.yes/totalVotes)*100) : 0}%)</div>
+        <div style="margin-top: 5px;">❌ ${noText}: ${voteCounts.no} (${totalVotes > 0 ? Math.round((voteCounts.no/totalVotes)*100) : 0}%)</div>
       </div>
     `;
     statsDiv.style.display = 'block';

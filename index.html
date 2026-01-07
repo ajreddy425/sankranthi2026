@@ -41,11 +41,90 @@
         <span class="notification-label-red" data-te="అప్‌డేట్‌లు" data-en="Updates">Updates</span>
         <div class="notification-scroll">
             <span class="notification-content">
-                <span class="notification-badge" data-te="🆕 కొత్త" data-en="🆕 NEW">🆕 NEW</span>
-                <span class="notification-text" data-te="దయచేసి సంక్రాంతి వేడుకలపై మీ అభిప్రాయం పంచుకోండి" data-en="Please share your opinion on the Sankranthi celebrations">దయచేసి సంక్రాంతి వేడుకలపై మీ అభిప్రాయం పంచుకోండి</span>
-                <span class="notification-badge" data-te="🆕 కొత్త" data-en="🆕 NEW">🆕 NEW</span>
+                <span class="notification-badge animated-badge" data-te="కొత్త" data-en="NEW">NEW</span>
+                <a href="#games" style="text-decoration: none; color: inherit;">
+                    <span class="notification-text animated-content" data-te="సంక్రాంతి ఆటల షెడ్యూల్ విడుదలైంది: ఇక్కడ క్లిక్ చేయండి" data-en="Sankranthi Games Schedule has been Released: Click here">సంక్రాంతి ఆటల షెడ్యూల్ విడుదలైంది: ఇక్కడ క్లిక్ చేయండి</span>
+                </a>
+                <span class="notification-badge animated-badge" data-te="కొత్త" data-en="NEW">NEW</span>
             </span>
         </div>
+        
+        <style>
+        .notification-bar:hover .animated-badge,
+        .notification-bar:hover .animated-content {
+            animation-play-state: paused;
+        }
+        
+        .notification-bar:hover .notification-scroll {
+            animation-play-state: paused;
+        }
+        
+        .notification-bar:hover .notification-content {
+            animation-play-state: paused;
+        }
+        
+        .animated-badge {
+            color: white !important;
+            font-weight: bold !important;
+            padding: 0.2rem 0.5rem !important;
+            border-radius: 8px !important;
+            font-size: 0.7rem !important;
+            animation: colorPulse 1.5s infinite;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+        }
+        
+        .animated-content {
+            font-weight: bold !important;
+            animation: textColorPulse 2s infinite;
+            transition: all 0.3s ease !important;
+        }
+        
+        @keyframes colorPulse {
+            0% { 
+                background: linear-gradient(135deg, #ff6b35, #f7931e);
+                transform: scale(1);
+            }
+            25% { 
+                background: linear-gradient(135deg, #2196F3, #1976D2);
+                transform: scale(1.05);
+            }
+            50% { 
+                background: linear-gradient(135deg, #4CAF50, #388E3C);
+                transform: scale(1);
+            }
+            75% { 
+                background: linear-gradient(135deg, #E91E63, #C2185B);
+                transform: scale(1.05);
+            }
+            100% { 
+                background: linear-gradient(135deg, #ff6b35, #f7931e);
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes textColorPulse {
+            0% { 
+                color: #ff6b35;
+                text-shadow: 0 0 5px rgba(255, 107, 53, 0.3);
+            }
+            25% { 
+                color: #2196F3;
+                text-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+            }
+            50% { 
+                color: #4CAF50;
+                text-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+            }
+            75% { 
+                color: #E91E63;
+                text-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
+            }
+            100% { 
+                color: #ff6b35;
+                text-shadow: 0 0 5px rgba(255, 107, 53, 0.3);
+            }
+        }
+        </style>
     </div>
 
     <!-- Hero Section -->
@@ -213,6 +292,52 @@
     <section id="games" class="games">
       <div class="container">
         <h2 data-te="🎮 సంక్రాంతి ఆటల షెడ్యూల్" data-en="🎮 Sankranthi Games Schedule">🎮 సంక్రాంతి ఆటల షెడ్యూల్</h2>
+        
+        <div class="notices-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+          <!-- Kids Games -->
+          <div class="notice-card notice-1" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; padding: 1rem; min-height: auto;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+            <div class="notice-date" data-te="పిల్లలు" data-en="KIDS" style="font-size: 0.8rem; padding: 0.3rem 0.6rem;">పిల్లలు</div>
+            <div class="notice-title" data-te="పిల్లల ఆటల షెడ్యూల్" data-en="Kids Games Schedule" style="font-size: 1rem; margin: 0.5rem 0;">పిల్లల ఆటల షెడ్యూల్</div>
+            <div class="notice-text" data-te="పిల్లలకు ప్రత్యేక ఆటలు మరియు పోటీలు" data-en="Special games and competitions for kids" style="font-size: 0.85rem; line-height: 1.3;">పిల్లలకు ప్రత్యేక ఆటలు మరియు పోటీలు</div>
+            <div class="notice-buttons" style="margin-top: 0.8rem;">
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/KidsScheduleSankranthi_2026.png" target="_blank" class="notice-btn view-btn" data-te="చూడండి" data-en="View" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; margin-right: 0.5rem;">చూడండి</a>
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/KidsScheduleSankranthi_2026.png" download="KidsGamesSchedule2026.png" class="notice-btn download-btn" data-te="డౌన్‌లోడ్" data-en="Download" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">డౌన్‌లోడ్</a>
+            </div>
+          </div>
+
+          <!-- Women's Games -->
+          <div class="notice-card notice-2" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; padding: 1rem; min-height: auto;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+            <div class="notice-date" data-te="మహిళలు" data-en="WOMENS" style="font-size: 0.8rem; padding: 0.3rem 0.6rem;">మహిళలు</div>
+            <div class="notice-title" data-te="మహిళల ఆటల షెడ్యూల్" data-en="Women's Games Schedule" style="font-size: 1rem; margin: 0.5rem 0;">మహిళల ఆటల షెడ్యూల్</div>
+            <div class="notice-text" data-te="మహిళలకు ప్రత్యేక క్రీడలు మరియు కార్యక్రమాలు" data-en="Special sports and activities for women" style="font-size: 0.85rem; line-height: 1.3;">మహిళలకు ప్రత్యేక క్రీడలు మరియు కార్యక్రమాలు</div>
+            <div class="notice-buttons" style="margin-top: 0.8rem;">
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/WomensScheduleSankranthi_2026.png" target="_blank" class="notice-btn view-btn" data-te="చూడండి" data-en="View" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; margin-right: 0.5rem;">చూడండి</a>
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/WomensScheduleSankranthi_2026.png" download="WomensGamesSchedule2026.png" class="notice-btn download-btn" data-te="డౌన్‌లోడ్" data-en="Download" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">డౌన్‌లోడ్</a>
+            </div>
+          </div>
+
+          <!-- Men's Games -->
+          <div class="notice-card notice-3" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; padding: 1rem; min-height: auto;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+            <div class="notice-date" data-te="పురుషులు" data-en="MENS" style="font-size: 0.8rem; padding: 0.3rem 0.6rem;">పురుషులు</div>
+            <div class="notice-title" data-te="పురుషుల ఆటల షెడ్యూల్" data-en="Men's Games Schedule" style="font-size: 1rem; margin: 0.5rem 0;">పురుషుల ఆటల షెడ్యూల్</div>
+            <div class="notice-text" data-te="పురుషుల కోసం శక్తివంత క్రీడలు మరియు పోటీలు" data-en="Powerful sports and competitions for men" style="font-size: 0.85rem; line-height: 1.3;">పురుషుల కోసం శక్తివంత క్రీడలు మరియు పోటీలు</div>
+            <div class="notice-buttons" style="margin-top: 0.8rem;">
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/MensScheduleSankranthi_2026.png" target="_blank" class="notice-btn view-btn" data-te="చూడండి" data-en="View" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; margin-right: 0.5rem;">చూడండి</a>
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/MensScheduleSankranthi_2026.png" download="MensGamesSchedule2026.png" class="notice-btn download-btn" data-te="డౌన్‌లోడ్" data-en="Download" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">డౌన్‌లోడ్</a>
+            </div>
+          </div>
+
+          <!-- All Games PDF -->
+          <div class="notice-card notice-4" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; padding: 1rem; min-height: auto;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+            <div class="notice-date" data-te="పూర్తి PDF" data-en="Complete PDF" style="font-size: 0.8rem; padding: 0.3rem 0.6rem;">పూర్తి PDF</div>
+            <div class="notice-title" data-te="మొత్తం ఆటల షెడ్యూల్" data-en="All Games Schedule" style="font-size: 1rem; margin: 0.5rem 0;">మొత్తం ఆటల షెడ్యూల్</div>
+            <div class="notice-text" data-te="అన్ని ఆటల షెడ్యూల్‌లు ఒకే PDF లో" data-en="All games schedules in single PDF" style="font-size: 0.85rem; line-height: 1.3;">అన్ని ఆటల షెడ్యూల్‌లు ఒకే PDF లో</div>
+            <div class="notice-buttons" style="margin-top: 0.8rem;">
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/GamesScheduleSankranthi_2026.pdf" target="_blank" class="notice-btn view-btn" data-te="చూడండి" data-en="View" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; margin-right: 0.5rem;">చూడండి</a>
+              <a href="https://sankranthi-bucket-2026.s3.us-east-1.amazonaws.com/Games/GamesScheduleSankranthi_2026.pdf" download="AllGamesSchedule2026.pdf" class="notice-btn download-btn" data-te="డౌన్‌లోడ్" data-en="Download" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">డౌన్‌లోడ్</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -494,6 +619,23 @@ document.addEventListener('DOMContentLoaded', function() {
     </footer>
 
 <script>
+// Download functionality
+function downloadImage(url, filename) {
+  // Create a temporary link element
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.style.display = 'none';
+  
+  // Add to DOM, click, and remove
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  
+  // Return false to prevent default link behavior
+  return false;
+}
+
 // Language toggle functionality
 let currentLanguage = localStorage.getItem('selectedLanguage') || 'te';
 

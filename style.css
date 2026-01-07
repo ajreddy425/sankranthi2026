@@ -839,7 +839,6 @@ section h2 {
   box-shadow: 0 3px 8px rgba(76, 175, 80, 0.3);
 }
 
-}
 
 @media (max-width: 768px) {
   .notices-section {
@@ -885,7 +884,5 @@ section h2 {
   .visitor-count {
     font-size: 1.5rem;
   }
-}
-
 }
 

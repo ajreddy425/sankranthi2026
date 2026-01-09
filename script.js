@@ -2,17 +2,21 @@
 
 // AWS Configuration - Using IAM Roles (SECURE - No credentials needed!)
 const AWS_CONFIG = {
-  region: 'us-east-1' // Change to your preferred AWS region
+  region: 'us-east-1' // Change this to your DynamoDB table's region if different
 };
 
 // Initialize AWS with IAM role authentication
 let dynamoDB = null;
 try {
+  console.log('🔧 Attempting to initialize AWS SDK...');
   AWS.config.update(AWS_CONFIG);
+  console.log('✅ AWS config updated, region:', AWS_CONFIG.region);
+  
   dynamoDB = new AWS.DynamoDB.DocumentClient();
   console.log('✅ AWS SDK initialized successfully');
 } catch (error) {
   console.error('❌ AWS SDK initialization failed:', error.message);
+  console.error('Full error:', error);
 }
 
 // Visitor tracking function
@@ -99,27 +103,35 @@ function updateVisitorDisplay(count) {
   }
 }
 
+// Simple visitor counter (works without AWS)
+function simpleVisitorCounter() {
+  const visitorElement = document.getElementById('visitor-count');
+  if (!visitorElement) return;
+
+  // Get stored count from localStorage
+  let count = localStorage.getItem('totalVisitors');
+  if (!count) {
+    count = 0;
+  }
+  
+  // Increment count
+  count = parseInt(count) + 1;
+  localStorage.setItem('totalVisitors', count);
+  
+  // Display count
+  visitorElement.textContent = count;
+  console.log('✅ Simple visitor count updated to:', count);
+}
+
 // Initialize on page load
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('🚀 Page loaded - initializing visitor tracking');
-  
-  // Check if AWS SDK loaded
-  if (typeof AWS === 'undefined') {
-    console.error('❌ AWS SDK not loaded - tracking prevention or CDN blocked');
-    updateVisitorDisplay('CDN Blocked');
-    return;
-  }
+  console.log('🚀 Page loaded - using simple visitor counter');
   
   setupSmoothScroll();
   handleFormSubmit();
   
-  // Track visitor and get count
-  trackVisitor();
-  
-  // Add small delay for getVisitorCount to ensure tracking completes first
-  setTimeout(() => {
-    getVisitorCount();
-  }, 1000);
+  // Use simple counter as fallback
+  simpleVisitorCounter();
 });
 
 // Smooth scroll for nav links

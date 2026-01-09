@@ -10,15 +10,19 @@ let dynamoDB = null;
 try {
   AWS.config.update(AWS_CONFIG);
   dynamoDB = new AWS.DynamoDB.DocumentClient();
-  console.log('✅ AWS SDK initialized with IAM role authentication');
+  console.log('✅ AWS SDK initialized successfully');
 } catch (error) {
-  console.log('⚠️ AWS SDK not available or IAM role not configured:', error.message);
+  console.error('❌ AWS SDK initialization failed:', error.message);
 }
 
 // Visitor tracking function
 function trackVisitor() {
-  if (!dynamoDB) return;
+  if (!dynamoDB) {
+    console.log('❌ DynamoDB not available - skipping visitor tracking');
+    return;
+  }
 
+  console.log('📊 Tracking visitor...');
   const today = new Date().toISOString().split('T')[0];
   const timestamp = new Date().toISOString();
   
@@ -45,8 +49,9 @@ function trackVisitor() {
 
   dynamoDB.update(params, (err, data) => {
     if (err) {
-      console.error('Error tracking visitor:', err);
+      console.error('❌ Error tracking visitor:', err);
     } else {
+      console.log('✅ Visitor tracked successfully');
       updateVisitorDisplay(data.Attributes.visitor_count);
     }
   });
@@ -54,22 +59,30 @@ function trackVisitor() {
 
 // Function to get and display visitor count
 function getVisitorCount() {
-  if (!dynamoDB) return;
+  if (!dynamoDB) {
+    console.log('❌ DynamoDB not available - showing fallback count');
+    updateVisitorDisplay('Error');
+    return;
+  }
 
+  console.log('📊 Getting total visitor count...');
   const params = {
     TableName: 'website-visitors'
   };
 
   dynamoDB.scan(params, (err, data) => {
     if (err) {
-      console.error('Error getting visitor count:', err);
+      console.error('❌ Error getting visitor count:', err);
+      updateVisitorDisplay('Error');
     } else {
+      console.log('✅ DynamoDB scan successful, items:', data.Items.length);
       let totalVisitors = 0;
       if (data.Items) {
         data.Items.forEach(item => {
           totalVisitors += item.visitor_count || 0;
         });
       }
+      console.log('✅ Total visitors calculated:', totalVisitors);
       updateVisitorDisplay(totalVisitors);
     }
   });
@@ -80,17 +93,33 @@ function updateVisitorDisplay(count) {
   const visitorElement = document.getElementById('visitor-count');
   if (visitorElement) {
     visitorElement.textContent = count;
+    console.log('✅ Visitor count display updated to:', count);
+  } else {
+    console.error('❌ Visitor count element not found in DOM');
   }
 }
 
 // Initialize on page load
 document.addEventListener("DOMContentLoaded", () => {
+  console.log('🚀 Page loaded - initializing visitor tracking');
+  
+  // Check if AWS SDK loaded
+  if (typeof AWS === 'undefined') {
+    console.error('❌ AWS SDK not loaded - tracking prevention or CDN blocked');
+    updateVisitorDisplay('CDN Blocked');
+    return;
+  }
+  
   setupSmoothScroll();
   handleFormSubmit();
   
   // Track visitor and get count
   trackVisitor();
-  getVisitorCount();
+  
+  // Add small delay for getVisitorCount to ensure tracking completes first
+  setTimeout(() => {
+    getVisitorCount();
+  }, 1000);
 });
 
 // Smooth scroll for nav links

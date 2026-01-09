@@ -103,35 +103,104 @@ function updateVisitorDisplay(count) {
   }
 }
 
-// Simple visitor counter (works without AWS)
-function simpleVisitorCounter() {
-  const visitorElement = document.getElementById('visitor-count');
-  if (!visitorElement) return;
-
-  // Get stored count from localStorage
-  let count = localStorage.getItem('totalVisitors');
-  if (!count) {
-    count = 0;
+// Visitor tracking function
+function trackVisitor() {
+  if (!dynamoDB) {
+    console.log('❌ DynamoDB not available - skipping visitor tracking');
+    return;
   }
+
+  console.log('📊 Tracking visitor...');
+  const today = new Date().toISOString().split('T')[0];
+  const timestamp = new Date().toISOString();
   
-  // Increment count
-  count = parseInt(count) + 1;
-  localStorage.setItem('totalVisitors', count);
-  
-  // Display count
-  visitorElement.textContent = count;
-  console.log('✅ Simple visitor count updated to:', count);
+  const visitorInfo = {
+    userAgent: navigator.userAgent,
+    language: navigator.language,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    referrer: document.referrer || 'Direct',
+    timestamp: timestamp
+  };
+
+  const params = {
+    TableName: 'website-visitors',
+    Key: { 'date': today },
+    UpdateExpression: 'ADD visitor_count :inc SET last_updated = :timestamp, visitor_info = list_append(if_not_exists(visitor_info, :empty_list), :visitor)',
+    ExpressionAttributeValues: {
+      ':inc': 1,
+      ':timestamp': timestamp,
+      ':visitor': [visitorInfo],
+      ':empty_list': []
+    },
+    ReturnValues: 'UPDATED_NEW'
+  };
+
+  dynamoDB.update(params, (err, data) => {
+    if (err) {
+      console.error('❌ Error tracking visitor:', err);
+    } else {
+      console.log('✅ Visitor tracked successfully');
+      updateVisitorDisplay(data.Attributes.visitor_count);
+    }
+  });
+}
+
+// Function to get and display visitor count
+function getVisitorCount() {
+  if (!dynamoDB) {
+    console.log('❌ DynamoDB not available - showing fallback count');
+    updateVisitorDisplay('Error');
+    return;
+  }
+
+  console.log('📊 Getting total visitor count...');
+  const params = {
+    TableName: 'website-visitors'
+  };
+
+  dynamoDB.scan(params, (err, data) => {
+    if (err) {
+      console.error('❌ Error getting visitor count:', err);
+      updateVisitorDisplay('Error');
+    } else {
+      console.log('✅ DynamoDB scan successful, items:', data.Items.length);
+      let totalVisitors = 0;
+      if (data.Items) {
+        data.Items.forEach(item => {
+          totalVisitors += item.visitor_count || 0;
+        });
+      }
+      console.log('✅ Total visitors calculated:', totalVisitors);
+      updateVisitorDisplay(totalVisitors);
+    }
+  });
+}
+
+// Update visitor count display
+function updateVisitorDisplay(count) {
+  const visitorElement = document.getElementById('visitor-count');
+  if (visitorElement) {
+    visitorElement.textContent = count;
+    console.log('✅ Visitor count display updated to:', count);
+  } else {
+    console.error('❌ Visitor count element not found in DOM');
+  }
 }
 
 // Initialize on page load
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('🚀 Page loaded - using simple visitor counter');
+  console.log('🚀 Page loaded - initializing DynamoDB visitor tracking');
   
   setupSmoothScroll();
   handleFormSubmit();
   
-  // Use simple counter as fallback
-  simpleVisitorCounter();
+  // Track visitor and get count with DynamoDB
+  trackVisitor();
+  
+  // Get total visitor count after a short delay
+  setTimeout(() => {
+    getVisitorCount();
+  }, 1000);
 });
 
 // Smooth scroll for nav links

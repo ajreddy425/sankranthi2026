@@ -1,9 +1,96 @@
 // script.js
 
+// AWS Configuration - Using IAM Roles (SECURE - No credentials needed!)
+const AWS_CONFIG = {
+  region: 'us-east-1' // Change to your preferred AWS region
+};
+
+// Initialize AWS with IAM role authentication
+let dynamoDB = null;
+try {
+  AWS.config.update(AWS_CONFIG);
+  dynamoDB = new AWS.DynamoDB.DocumentClient();
+  console.log('✅ AWS SDK initialized with IAM role authentication');
+} catch (error) {
+  console.log('⚠️ AWS SDK not available or IAM role not configured:', error.message);
+}
+
+// Visitor tracking function
+function trackVisitor() {
+  if (!dynamoDB) return;
+
+  const today = new Date().toISOString().split('T')[0];
+  const timestamp = new Date().toISOString();
+  
+  const visitorInfo = {
+    userAgent: navigator.userAgent,
+    language: navigator.language,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    referrer: document.referrer || 'Direct',
+    timestamp: timestamp
+  };
+
+  const params = {
+    TableName: 'website-visitors',
+    Key: { 'date': today },
+    UpdateExpression: 'ADD visitor_count :inc SET last_updated = :timestamp, visitor_info = list_append(if_not_exists(visitor_info, :empty_list), :visitor)',
+    ExpressionAttributeValues: {
+      ':inc': 1,
+      ':timestamp': timestamp,
+      ':visitor': [visitorInfo],
+      ':empty_list': []
+    },
+    ReturnValues: 'UPDATED_NEW'
+  };
+
+  dynamoDB.update(params, (err, data) => {
+    if (err) {
+      console.error('Error tracking visitor:', err);
+    } else {
+      updateVisitorDisplay(data.Attributes.visitor_count);
+    }
+  });
+}
+
+// Function to get and display visitor count
+function getVisitorCount() {
+  if (!dynamoDB) return;
+
+  const params = {
+    TableName: 'website-visitors'
+  };
+
+  dynamoDB.scan(params, (err, data) => {
+    if (err) {
+      console.error('Error getting visitor count:', err);
+    } else {
+      let totalVisitors = 0;
+      if (data.Items) {
+        data.Items.forEach(item => {
+          totalVisitors += item.visitor_count || 0;
+        });
+      }
+      updateVisitorDisplay(totalVisitors);
+    }
+  });
+}
+
+// Update visitor count display
+function updateVisitorDisplay(count) {
+  const visitorElement = document.getElementById('visitor-count');
+  if (visitorElement) {
+    visitorElement.textContent = count;
+  }
+}
+
 // Initialize on page load
 document.addEventListener("DOMContentLoaded", () => {
   setupSmoothScroll();
   handleFormSubmit();
+  
+  // Track visitor and get count
+  trackVisitor();
+  getVisitorCount();
 });
 
 // Smooth scroll for nav links

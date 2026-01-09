@@ -6,6 +6,8 @@
     <title>కాళేపల్లె సంక్రాంతి పండుగ 2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- AWS SDK for JavaScript -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1320.0.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -624,6 +626,10 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <div class="footer-bottom">
+            <div class="visitor-stats">
+                <span data-te="🏠 మొత్తం సందర్శకులు: " data-en="🏠 Total Visitors: ">🏠 మొత్తం సందర్శకులు: </span>
+                <span id="visitor-count" class="visitor-count">Loading...</span>
+            </div>
             <p id="copyright" data-te="© 2026 సంక్రాంతి పండుగ. అన్ని హక్కులు పరిరక్షించబడ్డాయి." data-en="© 2026 Sankranthi Festival. All rights reserved.">© 2026 సంక్రాంతి పండుగ. అన్ని హక్కులు పరిరక్షించబడ్డాయి.</p>
         </div>
     </footer>

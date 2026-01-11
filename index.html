@@ -6,6 +6,7 @@
     <title>కాళేపల్లె సంక్రాంతి పండుగ 2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot-styles.css">
 </head>
 <body>
     <header class="header">
@@ -690,3 +691,38 @@ function handleFormSubmit(event) {
     event.target.reset();
 }
 </script>
+
+<script src="script.js"></script>
+
+<!-- Chatbot Integration -->
+<div id="chatbot-container" class="chatbot-container">
+    <div id="chatbot-toggle" class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+        <span class="chatbot-badge" data-te="సహాయం" data-en="Help">సహాయం</span>
+    </div>
+    
+    <div id="chatbot-window" class="chatbot-window">
+        <div class="chatbot-header">
+            <h3 data-te="సంక్రాంతి సహాయకుడు" data-en="Sankranthi Assistant">సంక్రాంతి సహాయకుడు</h3>
+            <button id="chatbot-close" class="chatbot-close">&times;</button>
+        </div>
+        
+        <div id="chatbot-messages" class="chatbot-messages">
+            <div class="chatbot-message bot-message">
+                <div class="message-content" data-te="నమస్కారం! సంక్రాంతి పండుగ గురించి ఏమైనా అడగండి." data-en="Hello! Ask me anything about the Sankranthi festival.">నమస్కారం! సంక్రాంతి పండుగ గురించి ఏమైనా అడగండి.</div>
+            </div>
+        </div>
+        
+        <div class="chatbot-quick-questions">
+            <div class="quick-question" data-question="dates" data-te="తేదీలు" data-en="Dates">తేదీలు</div>
+            <div class="quick-question" data-question="events" data-te="కార్యక్రమాలు" data-en="Events">కార్యక్రమాలు</div>
+            <div class="quick-question" data-question="games" data-te="ఆటలు" data-en="Games">ఆటలు</div>
+            <div class="quick-question" data-question="location" data-te="స్థలం" data-en="Location">స్థలం</div>
+        </div>
+        
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="మీ ప్రశ్న టైప్ చేయండి..." data-te-placeholder="మీ ప్రశ్న టైప్ చేయండి..." data-en-placeholder="Type your question...">
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
